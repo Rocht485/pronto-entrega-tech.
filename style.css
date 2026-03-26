@@ -1,4 +1,3 @@
-/* RESET E CONFIGURAÇÃO DE TELA */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,6 @@ body {
     margin: 0 auto;
 }
 
-/* TOP BAR */
 .top-bar {
     background: #ff4500;
     color: #fff;
@@ -30,7 +28,6 @@ body {
     text-transform: uppercase;
 }
 
-/* NAVBAR */
 .navbar {
     background: #000;
     border-bottom: 1px solid #222;
@@ -46,7 +43,6 @@ body {
 .logo { font-size: 1.2rem; font-weight: 900; }
 .logo span { color: #ff4500; }
 
-/* HERO (PRODUTO PRINCIPAL) */
 .hero {
     display: flex;
     flex-direction: column;
@@ -59,13 +55,14 @@ body {
     width: 100%;
     max-width: 320px;
     margin-bottom: 20px;
+    min-height: 200px; /* Mantém espaço se a imagem demorar */
 }
 
 .hero-img img {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    display: block; /* Garante que ocupe espaço */
+    display: block;
 }
 
 h1 { 
@@ -88,7 +85,6 @@ h1 {
     margin: 10px 0; 
 }
 
-/* CAIXA DE PREÇO */
 .price-box {
     background: #0a0a0a;
     padding: 15px;
@@ -110,7 +106,6 @@ h1 {
 
 .pix-price { color: #aaa; font-size: 13px; }
 
-/* BOTÃO DE COMPRA */
 .btn-buy {
     display: block;
     width: 100%;
@@ -126,7 +121,6 @@ h1 {
 
 .shipping-info { font-size: 12px; color: #00ff41; margin-top: 10px; }
 
-/* GRID DE PRODUTOS */
 .product-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -144,9 +138,8 @@ h1 {
 
 .product-card img { width: 100%; max-width: 180px; margin-bottom: 10px; border-radius: 8px; }
 .price-tag { display: block; font-size: 1.2rem; font-weight: bold; color: #00ff41; margin-bottom: 10px; }
-.btn-buy-small { display: block; background: #222; color: #fff; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; }
+.btn-buy-small { display: block; background: #222; color: #fff; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; }
 
-/* WHATSAPP */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -166,7 +159,6 @@ h1 {
 
 footer { padding: 30px 0; text-align: center; color: #444; font-size: 11px; }
 
-/* AJUSTE PARA COMPUTADOR */
 @media (min-width: 768px) {
     .hero { flex-direction: row; text-align: left; gap: 50px; padding: 80px 0; }
     .hero-img { max-width: 450px; }

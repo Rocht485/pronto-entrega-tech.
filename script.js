@@ -39,3 +39,5 @@ function startCountdown() {
 window.onload = function () {
     startCountdown();
 };
+// Script simples para garantir o funcionamento básico
+console.log("Pronto Entrega Tech - Site Carregado");

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pronto Entrega Tech | Tecnologia de Elite</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,25 +10,29 @@
 
     <!-- BARRA DE URGÊNCIA -->
     <div class="top-bar">
-        <p id="countdown">🔥 A oferta encerra em: 15:00</p>
+        <p id="countdown">⚡ CARREGANDO OFERTA EXCLUSIVA...</p>
     </div>
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-flex">
             <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
+            <div class="nav-links">
+                <a href="#produtos">Produtos</a>
+                <a href="#depoimentos">Avaliações</a>
+                <a href="#faq">Dúvidas</a>
+            </div>
         </div>
     </nav>
 
     <!-- PRODUTO PRINCIPAL (HERO) -->
     <main class="container">
-        <section class="hero">
+        <section class="hero" id="destaque">
             <div class="hero-img">
-                <!-- Foto de um Smartwatch Ultra Premium -->
                 <img src="https://images.unsplash.com/photo-1508685096489-7aac296211ea?q=80&w=800" alt="Smartwatch Ultra Pro">
             </div>
             <div class="hero-content">
-                <span class="badge">MAIS VENDIDO DA SEMANA</span>
+                <span class="badge">MAIS VENDIDO</span>
                 <h1>Smartwatch Ultra Series 10 - Edição Black Gold</h1>
                 <p>O relógio inteligente mais completo do mercado. Monitoramento de saúde, notificações e bateria de longa duração.</p>
                 
@@ -38,58 +42,50 @@
                     <small>ou R$ 247,00 à vista no Pix</small>
                 </div>
 
-                <!-- LINK DO SEU MERCADO PAGO AQUI -->
                 <a href="https://mpago.la/SEU_LINK_AQUI" class="btn-buy">GARANTIR MEU DESCONTO AGORA</a>
-                
                 <p class="shipping-info">🚚 Frete Grátis para todo o Brasil hoje!</p>
             </div>
         </section>
 
-        <hr style="border: 0; border-top: 1px solid #1a1a1a; margin: 40px 0;">
-
         <!-- OUTRAS OFERTAS -->
-        <section class="product-category-section">
-            <h2 style="text-align: center; margin-bottom: 30px;">OUTRAS OFERTAS IMPERDÍVEIS</h2>
+        <section class="product-category-section" id="produtos">
+            <h2 class="section-title">OUTRAS OFERTAS IMPERDÍVEIS</h2>
             <div class="product-grid">
-                
-                <!-- PRODUTO 2 -->
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=500" alt="Fone TWS">
                     <h3>Fone Pro TWS Max</h3>
-                    <p>Cancelamento de ruído ativo e som HD.</p>
+                    <p>Cancelamento de ruído e som HD.</p>
                     <span class="price">R$ 147,00</span>
-                    <a href="https://mpago.la/SEU_LINK_FONE" class="btn-buy-small">COMPRAR</a>
+                    <a href="#" class="btn-buy-small">COMPRAR</a>
                 </div>
 
-                <!-- PRODUTO 3 -->
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500" alt="Headset Gamer">
                     <h3>Headset Gamer Orion</h3>
-                    <p>Imersão total para seus jogos favoritos.</p>
+                    <p>Imersão total para seus jogos.</p>
                     <span class="price">R$ 197,00</span>
-                    <a href="https://mpago.la/SEU_LINK_HEADSET" class="btn-buy-small">COMPRAR</a>
+                    <a href="#" class="btn-buy-small">COMPRAR</a>
                 </div>
-
             </div>
         </section>
 
         <!-- DEPOIMENTOS -->
-        <section class="testimonials">
+        <section class="testimonials" id="depoimentos">
             <h2>⭐ Quem comprou, aprovou!</h2>
             <div class="testimonial-grid">
                 <div class="testi-card">
-                    <p>"O Smartwatch chegou muito rápido. A tela é incrível e a bateria dura muito!"</p>
+                    <p>"O Smartwatch chegou muito rápido. A tela é incrível!"</p>
                     <span>- Ricardo M. ⭐⭐⭐⭐⭐</span>
                 </div>
                 <div class="testi-card">
-                    <p>"Comprei o fone e me surpreendi com a qualidade do grave. Recomendo demais."</p>
+                    <p>"Qualidade do fone é absurda pelo preço. Recomendo."</p>
                     <span>- Ana Paula J. ⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section class="faq-section">
+        <section class="faq-section" id="faq">
             <h2>🤔 Dúvidas Frequentes</h2>
             <div class="faq-item">
                 <h3>Quanto tempo demora a entrega?</h3>
@@ -97,7 +93,7 @@
             </div>
             <div class="faq-item">
                 <h3>O site é seguro?</h3>
-                <p>Sim! Usamos criptografia SSL e pagamentos via Mercado Pago para sua total segurança.</p>
+                <p>Sim! Pagamentos via Mercado Pago para sua total segurança.</p>
             </div>
         </section>
     </main>
@@ -105,7 +101,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 PRONTO ENTREGA TECH - CNPJ: 00.000.000/0001-00</p>
-            <p style="font-size: 0.8rem; color: #555; margin-top: 10px;">Este site não faz parte do Facebook ou Google. Todos os direitos reservados.</p>
         </div>
     </footer>
 

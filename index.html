@@ -9,28 +9,56 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        
         .top-bar { background: #ff4500; text-align: center; padding: 10px; font-weight: bold; font-size: 12px; letter-spacing: 1px; }
+        
         nav { padding: 25px; border-bottom: 1px solid #1a1a1a; text-align: center; background: #000; }
         .logo { font-size: 24px; font-weight: 900; letter-spacing: -1px; }
         .logo span { color: #ff4500; }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
         .section-title { text-align: center; margin-bottom: 40px; font-size: 28px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Grid de Produtos */
         .grid-products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 16px; overflow: hidden; text-align: center; padding-bottom: 25px; transition: 0.3s; }
         .card:hover { border-color: #333; transform: translateY(-5px); }
         .card img { width: 100%; height: 280px; object-fit: cover; }
         .card h3 { margin: 20px 0 10px; font-size: 18px; }
         .price { color: #00ff41; font-size: 24px; font-weight: bold; margin-bottom: 15px; display: block; }
-        .btn-details { background: #ff4500; color: #fff; text-decoration: none; padding: 12px 30px; border-radius: 8px; font-weight: bold; display: inline-block; transition: 0.3s; cursor: pointer; }
+        .btn-details { background: #ff4500; color: #fff; text-decoration: none; padding: 12px 30px; border-radius: 8px; font-weight: bold; display: inline-block; transition: 0.3s; }
         .btn-details:hover { background: #e63e00; scale: 1.05; }
-        footer { text-align: center; padding: 40px; border-top: 1px solid #1a1a1a; margin-top: 40px; color: #444; }
+
+        /* Benefícios */
+        .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; margin: 60px 0; padding: 40px 0; border-top: 1px solid #1a1a1a; }
+        .benefits i { color: #ff4500; font-size: 30px; margin-bottom: 10px; }
+        .benefits h4 { font-size: 14px; text-transform: uppercase; color: #eee; }
+
+        /* FAQ - Dúvidas Frequentes */
+        .faq-container { max-width: 700px; margin: 0 auto; margin-top: 40px; }
+        details { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 12px; margin-bottom: 12px; transition: 0.3s; }
+        details[open] { border-color: #ff4500; }
+        summary { padding: 18px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none; }
+        summary::after { content: '+'; color: #ff4500; font-size: 20px; }
+        details[open] summary::after { content: '-'; }
+        .faq-answer { padding: 0 18px 18px; color: #aaa; font-size: 14px; line-height: 1.6; }
+
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #1a1a1a; margin-top: 40px; color: #444; }
     </style>
 </head>
 <body>
-    <div class="top-bar">⚡ FRETE GRÁTIS PARA TODO O BRASIL ⚡</div>
-    <nav><div class="logo">PRONTO<span>ENTREGA</span>TECH</div></nav>
+
+    <div class="top-bar">⚡ FRETE GRÁTIS PARA TODO O BRASIL HOJE ⚡</div>
+
+    <nav>
+        <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
+    </nav>
+
     <main class="container">
+        
         <h2 class="section-title">Nossos Destaques</h2>
+        
         <div class="grid-products">
             <!-- PRODUTO 1 -->
             <div class="card">
@@ -39,6 +67,7 @@
                 <span class="price">R$ 247,00</span>
                 <a href="smartwatch-ultra.html#relogio" class="btn-details">VER DETALHES</a>
             </div>
+            
             <!-- PRODUTO 2 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500">
@@ -46,6 +75,7 @@
                 <span class="price">R$ 147,00</span>
                 <a href="smartwatch-ultra.html#fone" class="btn-details">VER DETALHES</a>
             </div>
+            
             <!-- PRODUTO 3 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
@@ -54,7 +84,47 @@
                 <a href="smartwatch-ultra.html#headset" class="btn-details">VER DETALHES</a>
             </div>
         </div>
+
+        <!-- SEÇÃO DE BENEFÍCIOS (VOLTOU!) -->
+        <div class="benefits">
+            <div><i class="fas fa-truck-fast"></i><h4>Entrega Expressa</h4></div>
+            <div><i class="fas fa-shield-check"></i><h4>Pagamento Seguro</h4></div>
+            <div><i class="fas fa-headset"></i><h4>Suporte via WhatsApp</h4></div>
+            <div><i class="fas fa-undo"></i><h4>Garantia de 7 dias</h4></div>
+        </div>
+
+        <!-- SEÇÃO DE DÚVIDAS (VOLTOU!) -->
+        <section class="faq-container">
+            <h2 class="section-title" style="font-size: 20px;"><i class="fas fa-question-circle" style="color:#ff4500"></i> Perguntas Frequentes</h2>
+            
+            <details>
+                <summary>Qual o prazo de entrega?</summary>
+                <div class="faq-answer">
+                    Nosso prazo médio é de 7 a 15 dias úteis, com código de rastreio enviado em até 3 dias.
+                </div>
+            </details>
+
+            <details>
+                <summary>O site é seguro?</summary>
+                <div class="faq-answer">
+                    Totalmente seguro! Usamos Mercado Pago para processar pagamentos, garantindo que seu dinheiro esteja protegido.
+                </div>
+            </details>
+
+            <details>
+                <summary>Como acompanho meu pedido?</summary>
+                <div class="faq-answer">
+                    Você receberá o link de rastreio direto no seu E-mail e WhatsApp assim que o produto for despachado.
+                </div>
+            </details>
+        </section>
+
     </main>
-    <footer><p>&copy; 2026 PRONTO ENTREGA TECH</p></footer>
+
+    <footer>
+        <p>&copy; 2026 PRONTO ENTREGA TECH - Todos os direitos reservados.</p>
+        <p style="margin-top: 10px; font-size: 10px;">CNPJ: 00.000.000/0001-00</p>
+    </footer>
+
 </body>
 </html>

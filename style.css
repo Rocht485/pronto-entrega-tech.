@@ -4,6 +4,7 @@ body { background-color: #000; color: #fff; line-height: 1.4; overflow-x: hidden
 
 .top-bar { background: #ff4500; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 11px; }
 .navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+.nav-flex { display: flex; justify-content: center; align-items: center; }
 .logo { font-size: 1.2rem; font-weight: 900; }
 .logo span { color: #ff4500; }
 .nav-links { display: none; } /* Ocultar links no mobile para limpar */
@@ -19,7 +20,7 @@ h1 { font-size: 1.6rem; margin: 10px 0; }
 /* CAIXA DE PREÇO - MELHORADA */
 .price-box { 
     background: #0a0a0a; 
-    padding: 20px 15px; /* Mais espaço interno */
+    padding: 20px 10px; 
     border-radius: 12px; 
     border: 2px solid #00ff41; 
     width: 100%; 
@@ -57,6 +58,7 @@ footer { padding: 30px 0; text-align: center; color: #444; font-size: 10px; bord
 @media (min-width: 768px) {
     .hero { flex-direction: row; text-align: left; gap: 50px; padding: 40px 0; }
     .product-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-flex { justify-content: space-between; }
     .nav-links { display: flex; }
     .logo { font-size: 1.5rem; }
 }

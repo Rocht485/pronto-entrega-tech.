@@ -2,105 +2,154 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pronto Entrega Tech | Smartwatch Ultra 10</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronto Entrega Tech - Oferta Especial</title>
+    <style>
+        /* --- ESTILOS GERAIS --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f7;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .product-card {
+            background: #fff;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* --- ESTILO DO TIMER --- */
+        #timer-container {
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .highlight-timer {
+            color: #ffde00;
+        }
+
+        /* --- ESTILO DO ESTOQUE (O QUE VOCÊ ADICIONOU) --- */
+        #stock-container {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 15px;
+            border: 1px dashed #e53e3e;
+        }
+
+        #stock-container p {
+            color: #c53030;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            font-size: 14px;
+        }
+
+        .progress-bar {
+            background-color: #edf2f7;
+            border-radius: 10px;
+            height: 10px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background-color: #e53e3e;
+            height: 100%;
+            width: 15%; /* Simula que restam poucos */
+            transition: width 1s ease-in-out;
+            /* Animação de pulso suave */
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* --- BOTÃO DE COMPRA --- */
+        .btn-buy {
+            display: block;
+            background-color: #25d366; /* Verde WhatsApp ou use #e53e3e para urgência */
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s;
+        }
+
+        .btn-buy:hover {
+            transform: scale(1.03);
+        }
+    </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <p>⚡ OFERTA EXCLUSIVA: FRETE GRÁTIS PARA TODO O BRASIL ⚡</p>
+    <div class="product-card">
+        <div id="timer-container" style="text-align: center;">
+            ⏱ A oferta encerra em: <span class="highlight-timer" id="timer">05:00</span>
+        </div>
+
+        <div class="product-info">
+            <h2>Smartwatch Serie 9 Pro</h2>
+            <p style="color: #666;">Edição Limitada - Tecnologia de Ponta no seu pulso.</p>
+            
+            <h3 style="color: #2d3748; font-size: 24px;">R$ 197,00</h3>
+        </div>
+
+        <div id="stock-container">
+            <p>🔥 Restam apenas <span id="stock-count">8</span> unidades em estoque!</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <a href="#" class="btn-buy">Garantir o meu agora!</a>
     </div>
 
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
-            <div class="nav-links">
-                <a href="#produtos">Produtos</a>
-                <a href="#depoimentos">Avaliações</a>
-                <a href="#faq">Dúvidas</a>
-            </div>
-        </div>
-    </nav>
+    <script>
+        // Script simples para o Timer (5 minutos)
+        let time = 300; 
+        const timerElement = document.getElementById('timer');
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-img">
-                <!-- Foto que agora está funcionando no seu PC -->
-                <img src="relogio.jpg?v=6" alt="Smartwatch Ultra 10">
-            </div>
-            <div class="hero-content">
-                <span class="badge">MAIS VENDIDO DA SEMANA</span>
-                <h1>Smartwatch Ultra 10 - Edição Black Gold</h1>
-                <p class="description">O relógio inteligente mais desejado de 2026. Monitoramento de saúde, notificações e bateria de longa duração.</p>
-                
-                <div class="price-box">
-                    <span class="old-price">De R$ 497,00</span>
-                    <span class="current-price">12x de R$ 24,70</span>
-                    <span class="pix-price">ou <strong>R$ 247,00</strong> à vista no Pix</span>
-                    
-                    <!-- ESTRUTURA DO TIMER (CRONÔMETRO) -->
-                    <div id="countdown-container">
-                        <p>ESTA OFERTA TERMINA EM:</p>
-                        <div id="timer">00:00:00</div>
-                    </div>
-                </div>
+        setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            timerElement.innerHTML = `${minutes}:${seconds}`;
+            if(time > 0) time--;
+        }, 1000);
 
-                <a href="https://mpago.la/318i2xL" class="btn-buy">GARANTIR MEU DESCONTO AGORA</a>
-                <p class="shipping-info">🚚 Frete Grátis e Código de Rastreio Incluso</p>
-            </div>
-        </section>
-
-        <section id="depoimentos">
-            <h2 class="section-title">⭐ QUEM COMPROU, APROVOU!</h2>
-            <div class="testimonial-grid">
-                <div class="testi-card">
-                    <p>"O relógio é incrível, a tela é muito nítida. Chegou rápido em Campinas!"</p>
-                    <span>- Ricardo M. ⭐⭐⭐⭐⭐</span>
-                </div>
-                <div class="testi-card">
-                    <p>"Melhor custo-benefício que já encontrei. Atendimento nota 10."</p>
-                    <span>- Ana Paula J. ⭐⭐⭐⭐⭐</span>
-                </div>
-                <div class="testi-card">
-                    <p>"Comprei para treinar e a bateria dura muito. Recomendo a loja!"</p>
-                    <span>- Marcos V. ⭐⭐⭐⭐⭐</span>
-                </div>
-                <div class="testi-card">
-                    <p>"Lindo demais, parece aqueles de 5 mil reais. Chegou tudo certinho."</p>
-                    <span>- Juliana S. ⭐⭐⭐⭐⭐</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section" id="faq">
-            <h2 class="section-title">🤔 DÚVIDAS FREQUENTES</h2>
-            <div class="faq-item">
-                <h3>O site é seguro?</h3>
-                <p>Sim! Usamos criptografia SSL e pagamentos via Mercado Pago.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Qual o prazo de entrega?</h3>
-                <p>De 3 a 10 dias úteis para todo o Brasil.</p>
-            </div>
-        </section>
-    </main>
-
-    <a href="https://wa.me/5519990009199?text=Olá! Gostaria de saber mais sobre o Ultra 10." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <footer>
-        <div style="margin-bottom: 15px;">
-            <a href="politicas.html" style="color: #666; text-decoration: none; font-size: 12px;">Privacidade</a> | 
-            <a href="politicas.html" style="color: #666; text-decoration: none; font-size: 12px;">Termos</a>
-        </div>
-        <p>&copy; 2026 PRONTO ENTREGA TECH</p>
-    </footer>
-
-    <!-- ESTA LINHA ABAIXO É O QUE FAZ O TIMER FUNCIONAR -->
-    <script src="script.js"></script>
+        // Script para o Estoque diminuir "sozinho"
+        function reduzirEstoque() {
+            const count = document.getElementById('stock-count');
+            let atual = parseInt(count.innerText);
+            if (atual > 2) {
+                count.innerText = atual - 1;
+            }
+        }
+        // Diminui uma unidade a cada 45 segundos
+        setInterval(reduzirEstoque, 45000);
+    </script>
 
 </body>
 </html>

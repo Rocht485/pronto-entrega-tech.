@@ -27,7 +27,8 @@
     <main class="container">
         <section class="hero">
             <div class="hero-img">
-                <img src="relogio.jpg?v=5" alt="Smartwatch Ultra 10">
+                <!-- Foto que agora está funcionando no seu PC -->
+                <img src="relogio.jpg?v=6" alt="Smartwatch Ultra 10">
             </div>
             <div class="hero-content">
                 <span class="badge">MAIS VENDIDO DA SEMANA</span>
@@ -39,9 +40,9 @@
                     <span class="current-price">12x de R$ 24,70</span>
                     <span class="pix-price">ou <strong>R$ 247,00</strong> à vista no Pix</span>
                     
-                    <!-- O TIMER VOLTOU AQUI -->
+                    <!-- ESTRUTURA DO TIMER (CRONÔMETRO) -->
                     <div id="countdown-container">
-                        <p>A oferta encerra em:</p>
+                        <p>ESTA OFERTA TERMINA EM:</p>
                         <div id="timer">00:00:00</div>
                     </div>
                 </div>
@@ -51,28 +52,55 @@
             </div>
         </section>
 
-        <!-- Seções de Produtos, Depoimentos e FAQ continuam aqui... -->
         <section id="depoimentos">
             <h2 class="section-title">⭐ QUEM COMPROU, APROVOU!</h2>
             <div class="testimonial-grid">
-                <div class="testi-card"><p>"O relógio é incrível, a tela é muito nítida!"</p><span>- Ricardo M. ⭐⭐⭐⭐⭐</span></div>
-                <div class="testi-card"><p>"Melhor custo-benefício que já encontrei."</p><span>- Ana Paula J. ⭐⭐⭐⭐⭐</span></div>
-                <div class="testi-card"><p>"Comprei para treinar e a bateria dura muito."</p><span>- Marcos V. ⭐⭐⭐⭐⭐</span></div>
-                <div class="testi-card"><p>"Lindo demais, parece aqueles de 5 mil reais."</p><span>- Juliana S. ⭐⭐⭐⭐⭐</span></div>
+                <div class="testi-card">
+                    <p>"O relógio é incrível, a tela é muito nítida. Chegou rápido em Campinas!"</p>
+                    <span>- Ricardo M. ⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="testi-card">
+                    <p>"Melhor custo-benefício que já encontrei. Atendimento nota 10."</p>
+                    <span>- Ana Paula J. ⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="testi-card">
+                    <p>"Comprei para treinar e a bateria dura muito. Recomendo a loja!"</p>
+                    <span>- Marcos V. ⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="testi-card">
+                    <p>"Lindo demais, parece aqueles de 5 mil reais. Chegou tudo certinho."</p>
+                    <span>- Juliana S. ⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <h2 class="section-title">🤔 DÚVIDAS FREQUENTES</h2>
+            <div class="faq-item">
+                <h3>O site é seguro?</h3>
+                <p>Sim! Usamos criptografia SSL e pagamentos via Mercado Pago.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Qual o prazo de entrega?</h3>
+                <p>De 3 a 10 dias úteis para todo o Brasil.</p>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/5519990009199" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5519990009199?text=Olá! Gostaria de saber mais sobre o Ultra 10." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <footer>
-        <a href="politicas.html">Privacidade</a> | <a href="politicas.html">Termos</a>
+        <div style="margin-bottom: 15px;">
+            <a href="politicas.html" style="color: #666; text-decoration: none; font-size: 12px;">Privacidade</a> | 
+            <a href="politicas.html" style="color: #666; text-decoration: none; font-size: 12px;">Termos</a>
+        </div>
         <p>&copy; 2026 PRONTO ENTREGA TECH</p>
     </footer>
 
-    <!-- CHAMADA DO SCRIPT PARA O TIMER FUNCIONAR -->
+    <!-- ESTA LINHA ABAIXO É O QUE FAZ O TIMER FUNCIONAR -->
     <script src="script.js"></script>
+
 </body>
 </html>

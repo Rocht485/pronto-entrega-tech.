@@ -45,7 +45,6 @@ body {
 
 .logo { font-size: 1.2rem; font-weight: 900; }
 .logo span { color: #ff4500; }
-.nav-links { display: none; }
 
 /* HERO (PRODUTO PRINCIPAL) */
 .hero {
@@ -66,6 +65,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 15px;
+    display: block; /* Garante que ocupe espaço */
 }
 
 h1 { 
@@ -88,7 +88,7 @@ h1 {
     margin: 10px 0; 
 }
 
-/* CAIXA DE PREÇO - ANTI-QUEBRA */
+/* CAIXA DE PREÇO */
 .price-box {
     background: #0a0a0a;
     padding: 15px;
@@ -102,7 +102,7 @@ h1 {
 
 .current-price { 
     display: block; 
-    font-size: 1.6rem; /* Tamanho seguro para celular */
+    font-size: 1.6rem; 
     color: #00ff41; 
     font-weight: 800; 
     margin: 5px 0;
@@ -164,20 +164,14 @@ h1 {
     z-index: 1000;
 }
 
-/* FAQ */
-.faq-section { padding: 40px 0; }
-.faq-item { background: #0a0a0a; padding: 15px; border-radius: 10px; margin-bottom: 10px; text-align: left; }
-.faq-item h3 { font-size: 15px; color: #ff4500; margin-bottom: 5px; }
-
 footer { padding: 30px 0; text-align: center; color: #444; font-size: 11px; }
 
-/* AJUSTE PARA TELAS GRANDES (PC) */
+/* AJUSTE PARA COMPUTADOR */
 @media (min-width: 768px) {
     .hero { flex-direction: row; text-align: left; gap: 50px; padding: 80px 0; }
     .hero-img { max-width: 450px; }
     h1 { font-size: 2.8rem; }
     .current-price { font-size: 2.5rem; }
     .product-grid { grid-template-columns: repeat(2, 1fr); }
-    .nav-links { display: flex; }
-    .nav-flex { justify-content: space-between; }
+    .nav-flex { justify-content: center; }
 }

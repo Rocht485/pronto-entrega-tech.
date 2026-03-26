@@ -2,178 +2,113 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pronto Entrega Tech | Tecnologia de Elite</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- BARRA DE URGÊNCIA -->
     <div class="top-bar">
-        ⚡ OFERTA EXCLUSIVA: FRETE GRÁTIS PARA TODO O BRASIL ⚡
+        <p id="countdown">🔥 A oferta encerra em: 15:00</p>
     </div>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
-        <div class="nav-links">
-            <a href="#hero">Destaque</a>
-            <a href="#audio">Áudio</a>
-            <a href="#acessorios">Acessórios</a>
+        <div class="container">
+            <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
         </div>
     </nav>
 
+    <!-- PRODUTO PRINCIPAL (HERO) -->
     <main class="container">
-        
-        <!-- SEÇÃO DESTAQUE: SMARTWATCH -->
-        <section id="hero" class="hero">
+        <section class="hero">
             <div class="hero-img">
-                <img src="https://pngate.com/wp-content/uploads/2025/04/apple-watch-series-10-black-1.png" alt="Smartwatch Ultra Series 10">
+                <!-- Foto de um Smartwatch Ultra Premium -->
+                <img src="https://images.unsplash.com/photo-1508685096489-7aac296211ea?q=80&w=800" alt="Smartwatch Ultra Pro">
             </div>
-
             <div class="hero-content">
-                <span class="badge">MAIS VENDIDO DE 2026</span>
-                <h1>Smartwatch Ultra Series 10</h1>
-                <p class="descricao">A tecnologia de elite agora ao alcance do seu pulso. Resistente, inteligente e elegante. Perfeito para treinos e para o dia a dia.</p>
+                <span class="badge">MAIS VENDIDO DA SEMANA</span>
+                <h1>Smartwatch Ultra Series 10 - Edição Black Gold</h1>
+                <p>O relógio inteligente mais completo do mercado. Monitoramento de saúde, notificações e bateria de longa duração.</p>
                 
                 <div class="price-box">
                     <span class="old-price">De R$ 497,00</span>
-                    <span class="current-price">12x de <strong>R$ 24,70</strong></span>
-                    <p class="pix-price">ou R$ 247,00 à vista no PIX</p>
+                    <span class="current-price">Por apenas 12x de R$ 24,70</span>
+                    <small>ou R$ 247,00 à vista no Pix</small>
                 </div>
 
-                <p id="countdown">🔥 A oferta encerra em: 14:59</p>
-
-                <a href="https://wa.me/55SEUTELEFONE?text=Olá!%20Quero%20aproveitar%20a%20oferta%20do%20Smartwatch%20Ultra%20Series%2010" class="btn-buy">GARANTIR MEU DESCONTO AGORA</a>
+                <!-- LINK DO SEU MERCADO PAGO AQUI -->
+                <a href="https://mpago.la/SEU_LINK_AQUI" class="btn-buy">GARANTIR MEU DESCONTO AGORA</a>
                 
-                <p class="stock-info">🔥 Apenas 7 unidades em estoque!</p>
+                <p class="shipping-info">🚚 Frete Grátis para todo o Brasil hoje!</p>
             </div>
         </section>
 
-        <hr>
+        <hr style="border: 0; border-top: 1px solid #1a1a1a; margin: 40px 0;">
 
-        <!-- CATEGORIA: ÁUDIO -->
-        <section id="audio" class="product-category-section">
-            <h2>🎧 Áudio & Som</h2>
+        <!-- OUTRAS OFERTAS -->
+        <section class="product-category-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">OUTRAS OFERTAS IMPERDÍVEIS</h2>
             <div class="product-grid">
+                
+                <!-- PRODUTO 2 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?q=80&w=500" alt="Fone Bluetooth TWS Pro">
-                    <h3>Fone Pro TWS Bass</h3>
-                    <p>Som imersivo, conexão automática e 24h de bateria total.</p>
-                    <span class="product-price">R$ 159,90</span>
-                    <a href="https://wa.me/55SEUTELEFONE?text=Olá!%20Quero%20comprar%20o%20Fone%20Pro%20TWS%20Bass" class="btn-buy-small" target="_blank">COMPRAR AGORA</a>
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=500" alt="Fone TWS">
+                    <h3>Fone Pro TWS Max</h3>
+                    <p>Cancelamento de ruído ativo e som HD.</p>
+                    <span class="price">R$ 147,00</span>
+                    <a href="https://mpago.la/SEU_LINK_FONE" class="btn-buy-small">COMPRAR</a>
                 </div>
 
+                <!-- PRODUTO 3 -->
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1546435770-a3e426da473b?q=80&w=500" alt="Headset Gamer Fury">
-                    <h3>Headset Gamer Fury</h3>
-                    <p>Som Surround 7.1 e microfone com redução de ruído ativa.</p>
-                    <span class="product-price">R$ 219,00</span>
-                    <a href="https://wa.me/55SEUTELEFONE?text=Olá!%20Quero%20comprar%20o%20Headset%20Gamer%20Fury" class="btn-buy-small" target="_blank">COMPRAR AGORA</a>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500" alt="Headset Gamer">
+                    <h3>Headset Gamer Orion</h3>
+                    <p>Imersão total para seus jogos favoritos.</p>
+                    <span class="price">R$ 197,00</span>
+                    <a href="https://mpago.la/SEU_LINK_HEADSET" class="btn-buy-small">COMPRAR</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="testimonials">
+            <h2>⭐ Quem comprou, aprovou!</h2>
+            <div class="testimonial-grid">
+                <div class="testi-card">
+                    <p>"O Smartwatch chegou muito rápido. A tela é incrível e a bateria dura muito!"</p>
+                    <span>- Ricardo M. ⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="testi-card">
+                    <p>"Comprei o fone e me surpreendi com a qualidade do grave. Recomendo demais."</p>
+                    <span>- Ana Paula J. ⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
         </section>
 
-        <!-- CATEGORIA: ACESSÓRIOS -->
-        <section id="acessorios" class="product-category-section">
-            <h2>🔌 Acessórios Essenciais</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/41isL-6+D7L._AC_SX679_.jpg" alt="Carregador Turbo 35W">
-                    <h3>Carregador Ultra Fast 35W</h3>
-                    <p>Carga segura: 50% da bateria em apenas 30 minutos.</p>
-                    <span class="product-price">R$ 99,90</span>
-                    <a href="https://wa.me/55SEUTELEFONE?text=Olá!%20Quero%20comprar%20o%20Carregador%20Ultra%20Fast%2035W" class="btn-buy-small" target="_blank">COMPRAR AGORA</a>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1609091839311-d536819fe228?q=80&w=500" alt="Power Bank 10000mAh">
-                    <h3>Power Bank 10.000mAh</h3>
-                    <p>Energia extra para até 3 cargas completas no seu celular.</p>
-                    <span class="product-price">R$ 189,90</span>
-                    <a href="https://wa.me/55SEUTELEFONE?text=Olá!%20Quero%20comprar%20o%20Power%20Bank%2010.000mAh" class="btn-buy-small" target="_blank">COMPRAR AGORA</a>
-                </div>
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>🤔 Dúvidas Frequentes</h2>
+            <div class="faq-item">
+                <h3>Quanto tempo demora a entrega?</h3>
+                <p>Enviamos em 24h úteis. O prazo médio é de 3 a 10 dias úteis.</p>
             </div>
-        </section>
-
-        <!-- BENEFÍCIOS -->
-        <section class="benefits-grid">
-            <div class="benefit-card">
-                <span>🚚</span>
-                <h3>Frete Grátis</h3>
-                <p>Entrega rápida para todo o Brasil</p>
+            <div class="faq-item">
+                <h3>O site é seguro?</h3>
+                <p>Sim! Usamos criptografia SSL e pagamentos via Mercado Pago para sua total segurança.</p>
             </div>
-            <div class="benefit-card">
-                <span>🛡️</span>
-                <h3>Garantia Total</h3>
-                <p>90 dias de proteção direto conosco</p>
-            </div>
-            <div class="benefit-card">
-                <span>🔒</span>
-                <h3>Compra Segura</h3>
-                <p>Seus dados 100% criptografados</p>
-            </div>
-        </section>
-
-        <!-- ESPECIFICAÇÕES TÉCNICAS -->
-        <section class="specs">
-            <h2>Especificações (Smartwatch)</h2>
-            <table class="specs-table">
-                <tr>
-                    <td><strong>Tela</strong></td>
-                    <td>AMOLED 2.2 polegadas (Bordas Infinitas)</td>
-                </tr>
-                <tr>
-                    <td><strong>Bateria</strong></td>
-                    <td>450mAh (Duração de 5 a 7 dias)</td>
-                </tr>
-                <tr>
-                    <td><strong>Compatibilidade</strong></td>
-                    <td>iOS 9.0+ / Android 5.0+</td>
-                </tr>
-            </table>
         </section>
     </main>
 
-    <!-- BOTÃO FLUTUANTE DE SUPORTE -->
-    <a href="https://wa.me/5519990009199?text=Olá!%20Preciso%20de%20suporte%20com%20minha%20compra." class="whatsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Falar com Suporte
-    </a>
-<!-- SEÇÃO: O QUE DIZEM NOSSOS CLIENTES -->
-<section class="testimonials">
-    <h2>⭐ Quem comprou, aprovou!</h2>
-    <div class="testimonial-grid">
-        <div class="testi-card">
-            <p>"Chegou em 4 dias em SP! O relógio é pesado, acabamento premium. Vale cada centavo."</p>
-            <span>- Ricardo M. ⭐⭐⭐⭐⭐</span>
-        </div>
-        <div class="testi-card">
-            <p>"O fone tem um grave absurdo. Comprei pro meu filho e agora quero um pra mim."</p>
-            <span>- Ana Paula J. ⭐⭐⭐⭐⭐</span>
-        </div>
-    </div>
-</section>
-
-<!-- SEÇÃO: PERGUNTAS FREQUENTES (FAQ) -->
-<section class="faq-section">
-    <h2>🤔 Dúvidas Frequentes</h2>
-    <div class="faq-item">
-        <h3>Quanto tempo demora a entrega?</h3>
-        <p>Enviamos em 24h úteis. O prazo médio é de 3 a 7 dias dependendo da sua região.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Tenho garantia?</h3>
-        <p>Sim! 90 dias de garantia total contra qualquer defeito de fabricação.</p>
-    </div>
-    <div class="faq-item">
-        <h3>O site é seguro?</h3>
-        <p>Usamos criptografia SSL e pagamentos via Mercado Pago, sua compra está 100% protegida.</p>
-    </div>
-</section>
     <footer>
-        <p>&copy; 2026 PRONTO ENTREGA TECH - Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2026 PRONTO ENTREGA TECH - CNPJ: 00.000.000/0001-00</p>
+            <p style="font-size: 0.8rem; color: #555; margin-top: 10px;">Este site não faz parte do Facebook ou Google. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

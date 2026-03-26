@@ -3,89 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas Premium | Pronto Entrega Tech</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ofertas Especiais | Pronto Entrega Tech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        nav { padding: 15px; border-bottom: 1px solid #1a1a1a; background: #000; position: sticky; top: 0; z-index: 100; }
+        .nav-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .timer-box { background: #111; padding: 25px; border: 2px solid #ff4500; border-radius: 15px; text-align: center; margin: 30px auto; max-width: 600px; }
+        #timer { font-size: 40px; font-weight: 900; color: #ff4500; }
+        .product-section { max-width: 800px; margin: 40px auto 80px; padding: 40px 20px; background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px; text-align: center; scroll-margin-top: 100px; }
+        .product-section img { width: 100%; max-width: 400px; border-radius: 15px; margin-bottom: 20px; border: 1px solid #222; }
+        .price-tag { color: #00ff41; font-size: 42px; font-weight: 900; margin: 15px 0; }
+        .btn-buy { display: block; background: #25d366; color: #fff; text-align: center; padding: 20px; border-radius: 12px; font-weight: bold; text-decoration: none; font-size: 20px; text-transform: uppercase; margin-top: 20px; transition: 0.3s; }
+        .btn-buy:hover { transform: scale(1.02); background: #1eb954; }
+        .testimonial { text-align: left; background: #111; padding: 20px; border-radius: 12px; margin-top: 30px; border-left: 4px solid #ff4500; }
+    </style>
 </head>
-<body style="background:#000; color:#fff; font-family:'Segoe UI', sans-serif; margin:0; line-height:1.6;">
-
-    <nav style="padding:15px; border-bottom:1px solid #222; background:#000; position:sticky; top:0; z-index:100;">
-        <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
-            <div style="font-size:20px; font-weight:bold;">PRONTO<span style="color:#ff4500;">ENTREGA</span>TECH</div>
-            <a href="index.html" style="color:#fff; text-decoration:none; font-size:14px;"><i class="fas fa-arrow-left"></i> Voltar à Loja</a>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div style="font-weight:900; font-size:20px;">PRONTO<span>ENTREGA</span>TECH</div>
+            <a href="index.html" style="color:#fff; text-decoration:none;">Voltar à Loja</a>
         </div>
     </nav>
+    <div class="timer-box"><div id="timer">00:00:00</div></div>
 
-    <main style="max-width:900px; margin:40px auto; padding:0 20px;">
-        
-        <div style="background:#111; padding:30px; border:2px solid #ff4500; border-radius:15px; text-align:center; margin-bottom:50px; box-shadow: 0 0 20px rgba(255,69,0,0.2);">
-            <p style="color:#ff4500; font-weight:bold; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">⚡ OFERTA DE LANÇAMENTO EXPIRA EM:</p>
-            <div id="timer" style="font-size:45px; font-weight:900; color:#ff4500;">00:00:00</div>
-            <p style="font-size:12px; color:#aaa; margin-top:10px;">Estoque limitado. Frete Grátis Ativado!</p>
-        </div>
+    <section class="product-section" id="relogio">
+        <img src="relogio.jpg">
+        <h2>Smartwatch Ultra 10</h2>
+        <div class="price-tag">R$ 247,00</div>
+        <a href="https://mpago.la/318i2xL" class="btn-buy">COMPRAR SMARTWATCH AGORA</a>
+        <div class="testimonial"><p>"Qualidade nota 10, chegou super rápido!" - Marcos A.</p></div>
+    </section>
 
-        <div style="display:grid; gap:40px;">
+    <section class="product-section" id="fone">
+        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500">
+        <h2>Fone Pro TWS Max</h2>
+        <div class="price-tag">R$ 147,00</div>
+        <a href="https://mpago.la/2ReooNL" class="btn-buy">COMPRAR FONE AGORA</a>
+        <div class="testimonial"><p>"Som perfeito e bateria dura muito." - Ricardo S.</p></div>
+    </section>
 
-            <div style="background:#0a0a0a; padding:30px; border-radius:15px; border:1px solid #333; text-align:center;">
-                <img src="relogio.jpg" style="width:100%; max-width:350px; border-radius:15px; display:block; margin:0 auto; border:1px solid #222;">
-                <h2 style="margin:20px 0; font-size:28px;">Smartwatch Ultra 10 - Black Gold</h2>
-                <div style="color:#ffb400; font-size:14px; margin-bottom:15px;">⭐⭐⭐⭐⭐ (124 avaliações)</div>
-                <p style="color:#666; text-decoration:line-through; font-size:14px;">De R$ 497,00</p>
-                <h3 style="color:#00ff41; font-size:40px; margin-bottom:10px;">R$ 247,00</h3>
-                <p style="color:#aaa; font-size:14px; margin-bottom:20px;">em 12x de R$ 24,70</p>
-                <a href="https://mpago.la/318i2xL" target="_blank" style="display:block; background:#25d366; color:#fff; text-align:center; padding:20px; border-radius:10px; font-weight:bold; text-decoration:none; font-size:20px; text-transform:uppercase; transition: 0.3s; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);">COMPRAR SMARTWATCH AGORA</a>
-                
-                <div style="margin-top:25px; text-align:left; background:#111; padding:20px; border-radius:10px;">
-                    <p style="font-size:14px; color:#ccc; font-style:italic; border-bottom:1px solid #222; padding-bottom:10px;">"O relógio é incrível! Chegou super rápido em SP e a qualidade da tela me surpreendeu." - <strong>Marcos A.</strong> ⭐⭐⭐⭐⭐</p>
-                    <p style="font-size:14px; color:#ccc; font-style:italic; padding-top:10px;">"O acabamento Black Gold é muito chique. Funciona tudo certinho com o iPhone." - <strong>Jéssica L.</strong> ⭐⭐⭐⭐⭐</p>
-                </div>
-            </div>
-
-            <hr style="border:0; border-top:1px solid #222; margin:20px 0;">
-
-            <div style="background:#0a0a0a; padding:30px; border-radius:15px; border:1px solid #333; text-align:center;">
-                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" style="width:100%; max-width:350px; border-radius:15px; display:block; margin:0 auto; border:1px solid #222;">
-                <h2 style="margin:20px 0; font-size:28px;">Fone Pro TWS Max - Bluetooth 5.3</h2>
-                <div style="color:#ffb400; font-size:14px; margin-bottom:15px;">⭐⭐⭐⭐⭐ (89 avaliações)</div>
-                <p style="color:#666; text-decoration:line-through; font-size:14px;">De R$ 297,00</p>
-                <h3 style="color:#00ff41; font-size:40px; margin-bottom:10px;">R$ 147,00</h3>
-                <p style="color:#aaa; font-size:14px; margin-bottom:20px;">em 12x de R$ 14,70</p>
-                <a href="https://mpago.la/318i2xL" target="_blank" style="display:block; background:#25d366; color:#fff; text-align:center; padding:20px; border-radius:10px; font-weight:bold; text-decoration:none; font-size:20px; text-transform:uppercase; transition: 0.3s; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);">COMPRAR FONE AGORA</a>
-                
-                <div style="margin-top:25px; text-align:left; background:#111; padding:20px; border-radius:10px;">
-                    <p style="font-size:14px; color:#ccc; font-style:italic; border-bottom:1px solid #222; padding-bottom:10px;">"O grave é muito potente! Não cai do ouvido nos treinos. Melhor custo benefício." - <strong>Ricardo S.</strong> ⭐⭐⭐⭐⭐</p>
-                    <p style="font-size:14px; color:#ccc; font-style:italic; padding-top:10px;">"Conecta na hora e o som é cristalino. A bateria dura dms!" - <strong>Felipe G.</strong> ⭐⭐⭐⭐⭐</p>
-                </div>
-            </div>
-
-            <hr style="border:0; border-top:1px solid #222; margin:20px 0;">
-
-            <div style="background:#0a0a0a; padding:30px; border-radius:15px; border:1px solid #333; text-align:center; margin-bottom:60px;">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" style="width:100%; max-width:350px; border-radius:15px; display:block; margin:0 auto; border:1px solid #222;">
-                <h2 style="margin:20px 0; font-size:28px;">Headset Orion Pro RGB - Gamer</h2>
-                <div style="color:#ffb400; font-size:14px; margin-bottom:15px;">⭐⭐⭐⭐⭐ (56 avaliações)</div>
-                <p style="color:#666; text-decoration:line-through; font-size:14px;">De R$ 347,00</p>
-                <h3 style="color:#00ff41; font-size:40px; margin-bottom:10px;">R$ 197,00</h3>
-                <p style="color:#aaa; font-size:14px; margin-bottom:20px;">em 12x de R$ 19,70</p>
-                <a href="https://mpago.la/318i2xL" target="_blank" style="display:block; background:#25d366; color:#fff; text-align:center; padding:20px; border-radius:10px; font-weight:bold; text-decoration:none; font-size:20px; text-transform:uppercase; transition: 0.3s; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);">COMPRAR HEADSET AGORA</a>
-                
-                <div style="margin-top:25px; text-align:left; background:#111; padding:20px; border-radius:10px;">
-                    <p style="font-size:14px; color:#ccc; font-style:italic; border-bottom:1px solid #222; padding-bottom:10px;">"Microfone premium! Perfeito para jogar CS e conversar no Discord. Confortável p dms." - <strong>André F.</strong> ⭐⭐⭐⭐⭐</p>
-                    <p style="font-size:14px; color:#ccc; font-style:italic; padding-top:10px;">"O RGB é lindo e o som do jogo fica muito imersivo. Recomendo!" - <strong>Lucas Mendes</strong> ⭐⭐⭐⭐☆</p>
-                </div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <footer style="text-align:center; padding:40px; border-top:1px solid #222; margin-top:50px; color:#666; font-size:13px;">
-        <p>&copy; 2026 PRONTO ENTREGA TECH</p>
-    </footer>
-
-    <a href="https://wa.me/5519990009199" style="position:fixed; bottom:25px; right:25px; background:#25d366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; z-index:1000; box-shadow:0 5px 15px rgba(0,0,0,0.3);">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <section class="product-section" id="headset">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+        <h2>Headset Orion Pro RGB</h2>
+        <div class="price-tag">R$ 197,00</div>
+        <a href="https://mpago.la/1nPdE7X" class="btn-buy">COMPRAR HEADSET AGORA</a>
+        <div class="testimonial"><p>"Confortável e microfone excelente." - André F.</p></div>
+    </section>
 
     <script src="script.js"></script>
 </body>

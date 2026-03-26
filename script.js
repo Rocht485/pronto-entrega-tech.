@@ -1,40 +1,37 @@
-// Função para iniciar a contagem regressiva
+// Função do Cronômetro
 function startCountdown(duration, display) {
     let timer = duration, hours, minutes, seconds;
-
-    // Atualiza o cronômetro a cada 1 segundo
-    const interval = setInterval(function () {
-        // Cálculos matemáticos para horas, minutos e segundos
+    setInterval(function () {
         hours = Math.floor(timer / 3600);
         minutes = Math.floor((timer % 3600) / 60);
         seconds = Math.floor(timer % 60);
 
-        // Adiciona um "0" na frente se o número for menor que 10
         hours = hours < 10 ? "0" + hours : hours;
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        // Exibe o tempo no elemento HTML com id="timer"
         display.textContent = hours + ":" + minutes + ":" + seconds;
-
-        // Quando o tempo acaba, ele reinicia a contagem (Efeito Loop de Urgência)
-        if (--timer < 0) {
-            timer = duration;
-        }
+        if (--timer < 0) { timer = duration; }
     }, 1000);
 }
 
-// Inicia o script assim que a janela carregar
+// Função para simular venda e cair estoque
+function simulateStock() {
+    let stockElement = document.getElementById('stock-count');
+    if (stockElement) {
+        let currentStock = parseInt(stockElement.innerText);
+        if (currentStock > 3) {
+            setTimeout(() => {
+                stockElement.innerText = currentStock - 1;
+                simulateStock();
+            }, Math.floor(Math.random() * 15000) + 8000); // Cai entre 8 a 23 segundos
+        }
+    }
+}
+
 window.onload = function () {
-    // Definimos 25 minutos de oferta (25 * 60 segundos)
     const twentyFiveMinutes = 60 * 25;
     const display = document.querySelector('#timer');
-
-    // Verifica se o elemento "timer" existe na página antes de iniciar
-    if (display) {
-        startCountdown(twentyFiveMinutes, display);
-    }
+    if (display) { startCountdown(twentyFiveMinutes, display); }
+    simulateStock();
 };
-
-// Log de confirmação no console para ajudar nos testes
-console.log("🚀 Pronto Entrega Tech: Script de Urgência Ativado!");

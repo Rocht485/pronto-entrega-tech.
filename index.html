@@ -2,189 +2,99 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pronto Entrega Tech</title>
-    <style>
-        /* --- ESTILO GERAL --- */
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        /* --- CARD PRINCIPAL --- */
-        .product-card {
-            background: #ffffff;
-            width: 380px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* --- TOPO COM TIMER --- */
-        .timer-header {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 12px;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .timer-header span {
-            color: #ffff00; /* Amarelo igual da foto */
-        }
-
-        /* --- CONTEÚDO DO PRODUTO --- */
-        .content {
-            padding: 30px 20px;
-        }
-
-        .product-title {
-            font-size: 24px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin: 0 0 10px 0;
-        }
-
-        .product-description {
-            color: #7a7a7a;
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-
-        .product-price {
-            font-size: 32px;
-            font-weight: 900;
-            color: #2c3e50;
-            margin-bottom: 25px;
-        }
-
-        /* --- BOX DE ESTOQUE (IGUAL A FOTO) --- */
-        #stock-container {
-            border: 1px dashed #ff4d4d;
-            background-color: #fff5f5;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 0 10px 20px 10px;
-        }
-
-        #stock-container p {
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 13px;
-            margin: 0 0 10px 0;
-        }
-
-        .progress-bar {
-            background: #e0e0e0;
-            height: 8px;
-            border-radius: 10px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            background: #f56565;
-            width: 15%; /* Barra curta para urgência */
-            height: 100%;
-            border-radius: 10px;
-            transition: width 1s ease-in-out;
-        }
-
-        /* --- BOTÃO DE AÇÃO --- */
-        .btn-buy {
-            display: block;
-            background-color: #2ecc71; /* Verde da foto */
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            text-transform: uppercase;
-            transition: background 0.3s;
-        }
-
-        .btn-buy:hover {
-            background-color: #27ae60;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pronto Entrega Tech | Smartwatch Ultra 10</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="product-card">
-        <!-- HEADER COM TIMER -->
-        <div class="timer-header">
-            ⏱ A oferta encerra em: <span id="timer">05:00</span>
-        </div>
-
-        <div class="content">
-            <!-- INFO PRODUTO -->
-            <h1 class="product-title">Smartwatch Serie 9 Pro</h1>
-            <p class="product-description">
-                Edição Limitada - Tecnologia de Ponta no seu pulso.
-            </p>
-            
-            <div class="product-price">R$ 197,00</div>
-
-            <!-- SEÇÃO DE ESTOQUE -->
-            <div id="stock-container">
-                <p>🔥 Restam apenas <span id="stock-count">8</span> unidades em estoque!</p>
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-            </div>
-
-            <!-- BOTÃO -->
-            <a href="#" class="btn-buy">GARANTIR O MEU AGORA!</a>
-        </div>
+    <div class="top-bar">
+        <p>⚡ OFERTA EXCLUSIVA: FRETE GRÁTIS PARA TODO O BRASIL ⚡</p>
     </div>
 
-    <script>
-        // --- LOGICA DO TIMER (5 MINUTOS) ---
-        let duration = 300; // 5 minutos em segundos
-        const display = document.querySelector('#timer');
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
+            <div class="nav-links">
+                <a href="#produtos">Produtos</a>
+                <a href="#depoimentos">Avaliações</a>
+                <a href="#faq">Dúvidas</a>
+            </div>
+        </div>
+    </nav>
 
-        function startTimer() {
-            let timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
+    <main class="container">
+        <section class="hero">
+            <div class="hero-img">
+                <img src="relogio.jpg?v=7" alt="Smartwatch Ultra 10">
+            </div>
+            <div class="hero-content">
+                <span class="badge">MAIS VENDIDO DA SEMANA</span>
+                <h1>Smartwatch Ultra 10 - Edição Black Gold</h1>
+                <p class="description">O relógio inteligente mais desejado de 2026. Monitoramento de saúde, notificações e bateria de longa duração.</p>
+                
+                <div class="price-box">
+                    <span class="old-price">De R$ 497,00</span>
+                    <span class="current-price">12x de R$ 24,70</span>
+                    <span class="pix-price">ou <strong>R$ 247,00</strong> à vista no Pix</span>
+                    
+                    <!-- TIMER E ESTOQUE -->
+                    <div id="urgency-container">
+                        <div id="countdown-container">
+                            <p>OFERTA ENCERRA EM:</p>
+                            <div id="timer">00:00:00</div>
+                        </div>
 
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
+                        <div id="stock-container">
+                            <p>🔥 RESTAM APENAS <span id="stock-count">8</span> UNIDADES!</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                display.textContent = minutes + ":" + seconds;
+                <a href="https://mpago.la/318i2xL" class="btn-buy">GARANTIR MEU DESCONTO AGORA</a>
+                <p class="shipping-info">🚚 Frete Grátis e Código de Rastreio Incluso</p>
+            </div>
+        </section>
 
-                if (--timer < 0) {
-                    timer = 0;
-                }
-            }, 1000);
-        }
+        <section id="depoimentos">
+            <h2 class="section-title">⭐ QUEM COMPROU, APROVOU!</h2>
+            <div class="testimonial-grid">
+                <div class="testi-card"><p>"O relógio é incrível, a tela é muito nítida!"</p><span>- Ricardo M. ⭐⭐⭐⭐⭐</span></div>
+                <div class="testi-card"><p>"Melhor custo-benefício que já encontrei."</p><span>- Ana Paula J. ⭐⭐⭐⭐⭐</span></div>
+                <div class="testi-card"><p>"Comprei para treinar e a bateria dura muito."</p><span>- Marcos V. ⭐⭐⭐⭐⭐</span></div>
+                <div class="testi-card"><p>"Lindo demais, parece aqueles de 5 mil reais."</p><span>- Juliana S. ⭐⭐⭐⭐⭐</span></div>
+            </div>
+        </section>
 
-        // --- LOGICA DO ESTOQUE ---
-        function updateStock() {
-            const stockElement = document.getElementById('stock-count');
-            let currentStock = parseInt(stockElement.innerText);
+        <section class="faq-section" id="faq">
+            <h2 class="section-title">🤔 DÚVIDAS FREQUENTES</h2>
+            <div class="faq-item">
+                <h3>O site é seguro?</h3>
+                <p>Sim! Usamos criptografia SSL e pagamentos via Mercado Pago.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Qual o prazo de entrega?</h3>
+                <p>De 3 a 10 dias úteis para todo o Brasil com rastreio.</p>
+            </div>
+        </section>
+    </main>
 
-            if (currentStock > 3) {
-                stockElement.innerText = currentStock - 1;
-            }
-        }
+    <a href="https://wa.me/5519990009199?text=Olá! Gostaria de saber mais sobre o Ultra 10." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        // Inicia as funções
-        window.onload = function () {
-            startTimer();
-            // Diminui o estoque a cada 45 segundos
-            setInterval(updateStock, 45000);
-        };
-    </script>
+    <footer>
+        <div style="margin-bottom: 15px;">
+            <a href="politicas.html" style="color: #666; text-decoration: none; font-size: 12px;">Privacidade</a> | 
+            <a href="politicas.html" style="color: #666; text-decoration: none; font-size: 12px;">Termos</a>
+        </div>
+        <p>&copy; 2026 PRONTO ENTREGA TECH</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

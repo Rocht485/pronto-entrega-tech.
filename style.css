@@ -3,66 +3,50 @@ body { background-color: #000; color: #fff; line-height: 1.4; overflow-x: hidden
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
 .top-bar { background: #ff4500; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 11px; }
-.navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; text-align: center; }
 .logo { font-size: 1.4rem; font-weight: 900; }
 .logo span { color: #ff4500; }
-.nav-links { display: none; }
 
 .hero { display: flex; flex-direction: column; align-items: center; padding: 30px 0; text-align: center; }
 .hero-img { width: 100%; max-width: 350px; margin-bottom: 20px; }
 .hero-img img { width: 100%; height: auto; border-radius: 20px; border: 1px solid #333; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-h1 { font-size: 1.8rem; margin: 15px 0; }
+h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; }
 .badge { background: #ff4500; padding: 5px 12px; border-radius: 5px; font-size: 11px; font-weight: bold; }
 .description { color: #888; font-size: 15px; margin-bottom: 20px; }
 
 .price-box { background: #0a0a0a; padding: 25px 15px; border-radius: 15px; border: 2px solid #00ff41; width: 100%; margin: 20px 0; }
 .old-price { text-decoration: line-through; color: #555; font-size: 13px; }
-.current-price { display: block; font-size: 1.8rem; color: #00ff41; font-weight: 800; margin: 5px 0; }
+.current-price { display: block; font-size: 2rem; color: #00ff41; font-weight: 800; margin: 5px 0; }
 .pix-price { color: #aaa; font-size: 14px; }
 
-.btn-buy { display: block; background: #ff4500; color: #fff; text-align: center; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+/* CSS DO TIMER E ESTOQUE */
+#urgency-container { margin-top: 20px; padding-top: 15px; border-top: 1px solid #222; }
+#countdown-container p { font-size: 11px; color: #ff4500; font-weight: bold; margin-bottom: 5px; }
+#timer { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 15px; letter-spacing: 2px; }
+
+#stock-container p { font-size: 12px; color: #ff4500; font-weight: bold; margin-bottom: 8px; }
+.progress-bar { background: #222; border-radius: 10px; height: 10px; width: 80%; margin: 0 auto; overflow: hidden; }
+.progress-fill { background: #ff4500; height: 100%; width: 18%; border-radius: 10px; animation: pulse 2s infinite; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+.btn-buy { display: block; background: #ff4500; color: #fff; text-align: center; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin-top: 10px; }
 .shipping-info { font-size: 12px; color: #00ff41; margin-top: 10px; }
 
-.section-title { font-size: 1.3rem; margin: 40px 0 20px; text-align: center; color: #ff4500; text-transform: uppercase; }
-.product-grid, .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-.product-card, .testi-card { background: #0a0a0a; padding: 25px; border-radius: 15px; border: 1px solid #1a1a1a; text-align: center; }
-.product-card img { width: 100%; max-width: 140px; margin-bottom: 10px; border-radius: 10px; }
-.price-tag { display: block; font-size: 1.2rem; font-weight: bold; color: #00ff41; margin-bottom: 10px; }
-.btn-buy-small { display: block; background: #222; color: #fff; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 13px; }
+.section-title { font-size: 1.3rem; margin: 40px 0 20px; text-align: center; color: #ff4500; }
+.testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+.testi-card { background: #0a0a0a; padding: 20px; border-radius: 15px; border: 1px solid #1a1a1a; text-align: center; }
+.testi-card span { display: block; margin-top: 10px; font-weight: bold; color: #ff4500; font-size: 12px; }
 
-.testi-card span { display: block; margin-top: 10px; font-weight: bold; font-size: 12px; color: #ff4500; }
+.faq-item { background: #0a0a0a; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #1a1a1a; text-align: left; }
+.faq-item h3 { font-size: 14px; color: #ff4500; margin-bottom: 5px; }
+.faq-item p { font-size: 13px; color: #888; }
 
-.faq-item { background: #0a0a0a; padding: 20px; border-radius: 12px; margin-bottom: 10px; border: 1px solid #1a1a1a; text-align: left; }
-.faq-item h3 { font-size: 15px; color: #ff4500; margin-bottom: 5px; }
-.faq-item p { font-size: 14px; color: #888; }
-
-.whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; z-index: 1000; text-decoration: none; }
-
-footer { padding: 40px 0; text-align: center; color: #444; font-size: 11px; border-top: 1px solid #1a1a1a; margin-top: 40px; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; z-index: 1000; text-decoration: none; }
+footer { padding: 40px 0; text-align: center; color: #444; font-size: 11px; margin-top: 30px; border-top: 1px solid #1a1a1a; }
 
 @media (min-width: 768px) {
-    .hero { flex-direction: row; text-align: left; gap: 50px; padding: 60px 0; }
-    .product-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
-    .nav-links { display: flex; gap: 20px; }
-    .nav-links a { color: #fff; text-decoration: none; font-size: 14px; }
-}
-#countdown-container {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #222;
-}
-#countdown-container p {
-    font-size: 12px;
-    color: #ff4500;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-#timer {
-    font-size: 24px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 2px;
+    .hero { flex-direction: row; text-align: left; gap: 50px; }
+    .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
 }

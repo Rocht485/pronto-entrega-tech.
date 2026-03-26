@@ -3,57 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas Especiais | Pronto Entrega Tech</title>
+    <title>Ofertas Exclusivas | Pronto Entrega Tech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
         nav { padding: 15px; border-bottom: 1px solid #1a1a1a; background: #000; position: sticky; top: 0; z-index: 100; }
         .nav-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .timer-box { background: #111; padding: 25px; border: 2px solid #ff4500; border-radius: 15px; text-align: center; margin: 30px auto; max-width: 600px; }
-        #timer { font-size: 40px; font-weight: 900; color: #ff4500; }
-        .product-section { max-width: 800px; margin: 40px auto 80px; padding: 40px 20px; background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px; text-align: center; scroll-margin-top: 100px; }
-        .product-section img { width: 100%; max-width: 400px; border-radius: 15px; margin-bottom: 20px; border: 1px solid #222; }
+        .timer-box { background: #111; padding: 20px; border: 2px solid #ff4500; border-radius: 15px; text-align: center; margin: 20px auto; max-width: 500px; }
+        #timer { font-size: 35px; font-weight: 900; color: #ff4500; }
+        
+        /* O segredo do pulo correto está no scroll-margin-top */
+        .product-section { 
+            max-width: 700px; 
+            margin: 40px auto 100px; 
+            padding: 40px 20px; 
+            background: #0a0a0a; 
+            border: 1px solid #1a1a1a; 
+            border-radius: 20px; 
+            text-align: center; 
+            scroll-margin-top: 100px; 
+        }
+        
+        .product-section img { width: 100%; max-width: 350px; border-radius: 15px; margin-bottom: 20px; border: 1px solid #222; }
         .price-tag { color: #00ff41; font-size: 42px; font-weight: 900; margin: 15px 0; }
-        .btn-buy { display: block; background: #25d366; color: #fff; text-align: center; padding: 20px; border-radius: 12px; font-weight: bold; text-decoration: none; font-size: 20px; text-transform: uppercase; margin-top: 20px; transition: 0.3s; }
+        .btn-buy { display: block; background: #25d366; color: #fff; text-align: center; padding: 20px; border-radius: 12px; font-weight: bold; text-decoration: none; font-size: 20px; text-transform: uppercase; margin-top: 20px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); }
         .btn-buy:hover { transform: scale(1.02); background: #1eb954; }
-        .testimonial { text-align: left; background: #111; padding: 20px; border-radius: 12px; margin-top: 30px; border-left: 4px solid #ff4500; }
+        .testimonial { text-align: left; background: #111; padding: 20px; border-radius: 12px; margin-top: 30px; border-left: 4px solid #ff4500; font-style: italic; color: #ccc; }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="nav-content">
-            <div style="font-weight:900; font-size:20px;">PRONTO<span>ENTREGA</span>TECH</div>
-            <a href="index.html" style="color:#fff; text-decoration:none;">Voltar à Loja</a>
+            <div style="font-weight:900;">PRONTO<span style="color:#ff4500;">ENTREGA</span>TECH</div>
+            <a href="index.html" style="color:#fff; text-decoration:none; font-size:14px;"><i class="fas fa-arrow-left"></i> Voltar</a>
         </div>
     </nav>
-    <div class="timer-box"><div id="timer">00:00:00</div></div>
 
+    <div class="timer-box">
+        <p style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">A oferta expira em:</p>
+        <div id="timer">02:59:59</div>
+    </div>
+
+    <!-- SEÇÃO RELÓGIO -->
     <section class="product-section" id="relogio">
         <img src="relogio.jpg">
-        <h2>Smartwatch Ultra 10</h2>
+        <h2>Smartwatch Ultra 10 - Black Gold</h2>
         <div class="price-tag">R$ 247,00</div>
-        <a href="https://mpago.la/318i2xL" class="btn-buy">COMPRAR SMARTWATCH AGORA</a>
-        <div class="testimonial"><p>"Qualidade nota 10, chegou super rápido!" - Marcos A.</p></div>
+        <!-- Link de 247 -->
+        <a href="https://mpago.la/318i2xL" target="_blank" class="btn-buy">COMPRAR RELÓGIO AGORA</a>
+        <div class="testimonial">"Chegou em 8 dias em SP. Relógio top demais!" - Marcos A.</div>
     </section>
 
+    <!-- SEÇÃO FONE -->
     <section class="product-section" id="fone">
         <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500">
-        <h2>Fone Pro TWS Max</h2>
+        <h2>Fone Pro TWS Max - Noise Cancelling</h2>
         <div class="price-tag">R$ 147,00</div>
-        <a href="https://mpago.la/2ReooNL" class="btn-buy">COMPRAR FONE AGORA</a>
-        <div class="testimonial"><p>"Som perfeito e bateria dura muito." - Ricardo S.</p></div>
+        <!-- Link de 147 que você mandou -->
+        <a href="https://mpago.la/2ReooNL" target="_blank" class="btn-buy">COMPRAR FONE AGORA</a>
+        <div class="testimonial">"O grave desse fone é absurdo pelo preço." - Ricardo S.</div>
     </section>
 
+    <!-- SEÇÃO HEADSET -->
     <section class="product-section" id="headset">
         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
-        <h2>Headset Orion Pro RGB</h2>
+        <h2>Headset Orion Pro RGB - Ultra Bass</h2>
         <div class="price-tag">R$ 197,00</div>
-        <a href="https://mpago.la/1nPdE7X" class="btn-buy">COMPRAR HEADSET AGORA</a>
-        <div class="testimonial"><p>"Confortável e microfone excelente." - André F.</p></div>
+        <!-- Link de 197 que você mandou -->
+        <a href="https://mpago.la/1nPdE7X" target="_blank" class="btn-buy">COMPRAR HEADSET AGORA</a>
+        <div class="testimonial">"Muito confortável, não aperta a orelha." - André F.</div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        // Timer simples de 3 horas
+        function startTimer(duration, display) {
+            var timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+                if (--timer < 0) { timer = duration; }
+            }, 1000);
+        }
+        window.onload = function () {
+            var duration = 60 * 60 * 3;
+            var display = document.querySelector('#timer');
+            startTimer(duration, display);
+        };
+    </script>
+
 </body>
 </html>

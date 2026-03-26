@@ -1,43 +1,40 @@
-// Configuração do Cronômetro de Oferta
-function startCountdown() {
-    const display = document.querySelector('#countdown');
-    let duration;
+// Função para iniciar a contagem regressiva
+function startCountdown(duration, display) {
+    let timer = duration, hours, minutes, seconds;
 
-    // Tenta recuperar o tempo salvo no navegador do cliente
-    const savedTime = localStorage.getItem('timer_pronto_entrega');
-    const now = Math.floor(Date.now() / 1000);
-
-    if (savedTime && savedTime > now) {
-        // Se já existe um cronômetro rodando, calcula quanto falta
-        duration = savedTime - now;
-    } else {
-        // Se não existe, define 15 minutos (900 segundos)
-        duration = 900; 
-        localStorage.setItem('timer_pronto_entrega', now + duration);
-    }
-
-    let timer = duration, minutes, seconds;
-
+    // Atualiza o cronômetro a cada 1 segundo
     const interval = setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+        // Cálculos matemáticos para horas, minutos e segundos
+        hours = Math.floor(timer / 3600);
+        minutes = Math.floor((timer % 3600) / 60);
+        seconds = Math.floor(timer % 60);
 
+        // Adiciona um "0" na frente se o número for menor que 10
+        hours = hours < 10 ? "0" + hours : hours;
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = "🔥 A oferta encerra em: " + minutes + ":" + seconds;
+        // Exibe o tempo no elemento HTML com id="timer"
+        display.textContent = hours + ":" + minutes + ":" + seconds;
 
+        // Quando o tempo acaba, ele reinicia a contagem (Efeito Loop de Urgência)
         if (--timer < 0) {
-            // Quando o tempo acaba, ele reinicia para novos visitantes
-            localStorage.removeItem('timer_pronto_entrega');
-            timer = 900;
+            timer = duration;
         }
     }, 1000);
 }
 
-// Inicia assim que a página carrega
+// Inicia o script assim que a janela carregar
 window.onload = function () {
-    startCountdown();
+    // Definimos 25 minutos de oferta (25 * 60 segundos)
+    const twentyFiveMinutes = 60 * 25;
+    const display = document.querySelector('#timer');
+
+    // Verifica se o elemento "timer" existe na página antes de iniciar
+    if (display) {
+        startCountdown(twentyFiveMinutes, display);
+    }
 };
-// Script simples para garantir o funcionamento básico
-console.log("Pronto Entrega Tech - Site Carregado");
+
+// Log de confirmação no console para ajudar nos testes
+console.log("🚀 Pronto Entrega Tech: Script de Urgência Ativado!");

@@ -48,3 +48,21 @@ footer { padding: 40px 0; text-align: center; color: #444; font-size: 11px; bord
     .nav-links { display: flex; gap: 20px; }
     .nav-links a { color: #fff; text-decoration: none; font-size: 14px; }
 }
+#countdown-container {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+}
+#countdown-container p {
+    font-size: 12px;
+    color: #ff4500;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+#timer {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+}

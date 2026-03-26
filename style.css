@@ -1,47 +1,63 @@
+/* Reset Geral */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
-body { background-color: #000; color: #fff; line-height: 1.4; overflow-x: hidden; }
+body { background-color: #000; color: #fff; line-height: 1.5; overflow-x: hidden; }
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
+/* Barra de Aviso */
 .top-bar { background: #ff4500; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 11px; }
+
+/* Navbar */
 .navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.2rem; font-weight: 900; }
+.nav-flex { display: flex; justify-content: center; align-items: center; }
+.logo { font-size: 1.4rem; font-weight: 900; }
 .logo span { color: #ff4500; }
-.nav-links { display: none; }
+.nav-links { display: none; } /* Oculto no Mobile */
 
-.hero { display: flex; flex-direction: column; align-items: center; padding: 20px 0; text-align: center; }
-.hero-img { width: 100%; max-width: 320px; margin-bottom: 20px; }
-.hero-img img { width: 100%; height: auto; border-radius: 15px; display: block; }
+/* Hero Section */
+.hero { display: flex; flex-direction: column; align-items: center; padding: 30px 0; text-align: center; }
+.hero-img { width: 100%; max-width: 350px; margin-bottom: 25px; }
+.hero-img img { width: 100%; height: auto; border-radius: 20px; border: 1px solid #333; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-h1 { font-size: 1.6rem; margin: 10px 0; }
-.badge { background: #ff4500; padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; }
-.description { color: #888; font-size: 14px; margin-bottom: 15px; }
+h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; }
+.badge { background: #ff4500; padding: 5px 12px; border-radius: 5px; font-size: 11px; font-weight: bold; }
+.description { color: #888; font-size: 15px; margin-bottom: 20px; }
 
-.price-box { background: #0a0a0a; padding: 20px; border-radius: 12px; border: 2px solid #00ff41; width: 100%; margin: 15px 0; }
-.old-price { text-decoration: line-through; color: #555; font-size: 12px; }
-.current-price { display: block; font-size: 1.6rem; color: #00ff41; font-weight: 800; margin: 5px 0; }
-.pix-price { color: #aaa; font-size: 13px; }
+/* Caixa de Preço */
+.price-box { background: #0a0a0a; padding: 25px 15px; border-radius: 15px; border: 2px solid #00ff41; width: 100%; margin: 20px 0; }
+.old-price { text-decoration: line-through; color: #555; font-size: 14px; display: block; }
+.current-price { display: block; font-size: 2rem; color: #00ff41; font-weight: 800; margin: 5px 0; }
+.pix-price { color: #aaa; font-size: 14px; display: block; }
 
-.btn-buy { display: block; background: #ff4500; color: #fff; text-align: center; padding: 18px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-.shipping-info { font-size: 11px; color: #00ff41; margin-top: 8px; }
+/* Botão de Compra */
+.btn-buy { display: block; background: #ff4500; color: #fff; text-align: center; padding: 20px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: transform 0.2s; box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3); }
+.btn-buy:active { transform: scale(0.98); }
+.shipping-info { font-size: 12px; color: #00ff41; margin-top: 12px; font-weight: 500; }
 
-.section-title { font-size: 1.2rem; margin: 40px 0 20px; text-align: center; color: #ff4500; }
-.product-grid, .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-.product-card, .testi-card { background: #0a0a0a; padding: 20px; border-radius: 15px; border: 1px solid #1a1a1a; text-align: center; }
-.product-card img { width: 100%; max-width: 140px; margin-bottom: 10px; }
-.price-tag { display: block; font-size: 1.1rem; font-weight: bold; color: #00ff41; margin-bottom: 10px; }
-.btn-buy-small { display: block; background: #222; color: #fff; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; }
+/* Depoimentos */
+.section-title { font-size: 1.3rem; margin: 50px 0 25px; text-align: center; color: #ff4500; text-transform: uppercase; letter-spacing: 1px; }
+.testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.testi-card { background: #0a0a0a; padding: 25px; border-radius: 15px; border: 1px solid #1a1a1a; text-align: center; font-style: italic; }
+.testi-card span { display: block; margin-top: 15px; font-weight: bold; color: #fff; font-style: normal; font-size: 13px; }
 
-.faq-item { background: #0a0a0a; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #1a1a1a; text-align: left; }
-.faq-item h3 { font-size: 14px; color: #ff4500; margin-bottom: 5px; }
-.faq-item p { font-size: 13px; color: #888; }
+/* FAQ */
+.faq-item { background: #0a0a0a; padding: 20px; border-radius: 12px; margin-bottom: 12px; border: 1px solid #1a1a1a; text-align: left; }
+.faq-item h3 { font-size: 15px; color: #ff4500; margin-bottom: 8px; }
+.faq-item p { font-size: 14px; color: #888; line-height: 1.4; }
 
-.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; z-index: 1000; }
-footer { padding: 40px 0; text-align: center; color: #444; font-size: 10px; margin-top: 40px; border-top: 1px solid #1a1a1a; }
+/* WhatsApp Flutuante */
+.whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; text-decoration: none; }
 
+/* Footer */
+footer { padding: 50px 0; text-align: center; color: #444; font-size: 11px; border-top: 1px solid #1a1a1a; margin-top: 50px; }
+
+/* Responsivo Desktop */
 @media (min-width: 768px) {
-    .hero { flex-direction: row; text-align: left; gap: 50px; padding: 40px 0; }
-    .product-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
-    .nav-links { display: flex; }
-    .nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 13px; }
+    .hero { flex-direction: row; text-align: left; gap: 60px; padding: 60px 0; }
+    .hero-img { margin-bottom: 0; max-width: 400px; }
+    .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-flex { justify-content: space-between; }
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 500; opacity: 0.8; }
+    .nav-links a:hover { opacity: 1; color: #ff4500; }
+    h1 { font-size: 2.5rem; }
 }

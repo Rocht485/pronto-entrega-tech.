@@ -1,91 +1,134 @@
-/* --- ESTILOS DE CATEGORIAS E GRADE --- */
-
-.nav-links {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #888;
-    font-size: 0.85rem;
+body {
+    background-color: #050505;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* NAVBAR RESPONSIVA */
+.navbar {
+    background: rgba(0,0,0,0.9);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+.logo span { color: #ff4500; }
+
+/* HERO SECTION (O DESTAQUE) */
+.hero {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar a linha no celular */
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.hero-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 500px; /* Impede que a foto fique gigante */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.badge {
+    background: #ff4500;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
     font-weight: bold;
-    text-transform: uppercase;
+}
+
+h1 { font-size: 2.5rem; margin: 15px 0; line-height: 1.1; }
+
+.price-box {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #00ff41;
+}
+
+.current-price { font-size: 2rem; color: #00ff41; display: block; }
+
+/* BOTÕES */
+.btn-buy {
+    display: block;
+    background: linear-gradient(90deg, #ff4500, #ff8c00);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #ff4500;
+/* --- AJUSTES PARA CELULAR (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    
+    .hero {
+        flex-direction: column; /* Coloca a foto em cima e o texto embaixo */
+        text-align: center;
+    }
+
+    .hero-img img {
+        max-width: 280px; /* Reduz a foto no celular para caber na tela */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Um produto por linha no celular */
+    }
+    
+    .price-box {
+        text-align: center;
+    }
 }
 
-.product-category-section {
-    padding: 60px 0 20px;
-    border-top: 1px solid #1a1a1a;
-}
-
-.product-category-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    border-left: 4px solid #ff4500;
-    padding-left: 15px;
-}
-
+/* CATEGORIAS E GRIDS */
+.product-category-section { padding: 40px 0; }
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .product-card {
     background: #111;
-    border: 1px solid #1a1a1a;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    transition: 0.3s;
+    border: 1px solid #1a1a1a;
 }
 
-.product-card:hover {
-    border-color: #ff4500;
-    transform: translateY(-5px);
-}
-
-.product-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.product-card p {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-bottom: 15px;
-    min-height: 40px;
-}
-
-.product-price {
-    display: block;
-    font-size: 1.5rem;
-    color: #00ff41;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.btn-buy-small {
-    display: inline-block;
-    background: #ff4500;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    width: 100%;
-    transition: 0.3s;
-}
-
-.btn-buy-small:hover {
-    background: #e63e00;
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
-}
+.product-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }

@@ -1,15 +1,16 @@
-/* RESET E CORES */
+/* RESET GERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
     background-color: #050505;
     color: #fff;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
     padding: 0 20px;
 }
 
-/* TOP BAR */
+/* TOP BAR (CRONÔMETRO) */
 .top-bar {
     background: #ff4500;
     color: #fff;
@@ -26,6 +27,7 @@ body {
     padding: 10px;
     font-weight: bold;
     font-size: 0.8rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -59,7 +61,7 @@ body {
 
 .nav-links a:hover { opacity: 1; color: #ff4500; }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -76,18 +78,23 @@ body {
     border-radius: 20px;
     display: block;
     margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.1);
 }
 
 .badge {
     background: #ff4500;
-    padding: 4px 12px;
-    border-radius: 4px;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
     font-size: 0.7rem;
     font-weight: bold;
 }
 
-h1 { font-size: 2.5rem; margin: 15px 0; line-height: 1.2; }
+h1 { font-size: 2.5rem; margin: 15px 0; line-height: 1.1; }
 
+.description { color: #ccc; margin-bottom: 20px; }
+
+/* CAIXA DE PREÇO */
 .price-box {
     background: #111;
     padding: 20px;
@@ -96,68 +103,54 @@ h1 { font-size: 2.5rem; margin: 15px 0; line-height: 1.2; }
     border-left: 4px solid #00ff41;
 }
 
-.old-price { text-decoration: line-through; color: #666; font-size: 0.9rem; }
-.current-price { display: block; font-size: 1.8rem; color: #00ff41; font-weight: bold; }
+.old-price { text-decoration: line-through; color: #666; font-size: 0.9rem; display: block; }
+.current-price { display: block; font-size: 2rem; color: #00ff41; font-weight: bold; line-height: 1; margin: 5px 0; }
+.pix-price { color: #aaa; font-size: 0.9rem; display: block; }
 
+/* BOTÃO COMPRA */
 .btn-buy {
     display: block;
     background: linear-gradient(90deg, #ff4500, #ff8c00);
     color: #fff;
     text-align: center;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
 }
 
-.btn-buy:hover { transform: scale(1.02); }
+.btn-buy:hover { transform: translateY(-3px); }
+
+.shipping-info { text-align: center; margin-top: 15px; font-size: 0.85rem; color: #00ff41; }
 
 /* GRID PRODUTOS */
-.section-title { text-align: center; margin: 40px 0; }
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product-card {
-    background: #111;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid #1a1a1a;
-}
-
+.section-title { text-align: center; margin: 50px 0 30px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+.product-card { background: #111; padding: 25px; border-radius: 20px; text-align: center; border: 1px solid #1a1a1a; transition: 0.3s; }
+.product-card:hover { border-color: #ff4500; }
 .product-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+.price-tag { display: block; font-size: 1.3rem; font-weight: bold; color: #00ff41; margin: 10px 0; }
+.btn-buy-small { display: inline-block; background: #222; color: #fff; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
 
-.btn-buy-small {
-    display: inline-block;
-    background: #222;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    font-size: 0.8rem;
-}
-
-/* TESTIMONIALS & FAQ */
-.testimonials, .faq-section { padding: 60px 0; text-align: center; }
+/* DEPOIMENTOS E FAQ */
+.testimonials, .faq-section { padding: 60px 0; }
 .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-.testi-card { background: #111; padding: 20px; border-radius: 10px; font-style: italic; }
-.testi-card span { display: block; margin-top: 10px; color: #ff4500; font-style: normal; font-weight: bold; }
+.testi-card { background: #111; padding: 25px; border-radius: 15px; font-style: italic; border: 1px solid #1a1a1a; }
+.testi-card span { display: block; margin-top: 15px; color: #ff4500; font-weight: bold; font-style: normal; }
 
-.faq-item { background: #111; padding: 20px; border-radius: 10px; margin: 10px auto; max-width: 700px; text-align: left; }
-.faq-item h3 { color: #ff4500; font-size: 1rem; margin-bottom: 5px; }
+.faq-item { background: #111; padding: 20px; border-radius: 10px; margin: 15px auto; max-width: 750px; text-align: left; }
+.faq-item h3 { color: #ff4500; font-size: 1.1rem; margin-bottom: 5px; }
 
-footer { padding: 40px 0; text-align: center; border-top: 1px solid #1a1a1a; color: #555; font-size: 0.8rem; }
+footer { padding: 50px 0; text-align: center; border-top: 1px solid #1a1a1a; color: #555; font-size: 0.8rem; }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE (CELULAR) */
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero { text-align: center; padding: 30px 0; }
-    h1 { font-size: 1.8rem; }
-    .hero-img img { max-width: 300px; }
+    .hero { flex-direction: column; text-align: center; padding: 30px 0; }
+    h1 { font-size: 2rem; }
+    .hero-img img { max-width: 280px; }
+    .price-box { text-align: center; }
 }

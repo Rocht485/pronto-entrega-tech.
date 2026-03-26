@@ -1,52 +1,79 @@
+/* --- BASE DO SITE (O QUE JÁ TÍNHAMOS) --- */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
 body { background-color: #000; color: #fff; line-height: 1.4; overflow-x: hidden; }
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
 .top-bar { background: #ff4500; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 11px; }
-.navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; text-align: center; }
-.logo { font-size: 1.4rem; font-weight: 900; }
+.navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.logo { font-size: 1.4rem; font-weight: 900; flex-shrink: 0; }
 .logo span { color: #ff4500; }
 
+/* --- BARRA DE BUSCA ESTILO MERCADO LIVRE --- */
+.search-bar { display: flex; flex: 1; max-width: 500px; background: #fff; border-radius: 4px; overflow: hidden; }
+.search-bar input { flex: 1; border: none; padding: 10px; outline: none; color: #333; }
+.search-bar button { background: #eee; border: none; padding: 10px 15px; cursor: pointer; color: #333; }
+
+/* --- VITRINE DE PRODUTOS --- */
+.section-title { font-size: 1.5rem; margin: 40px 0 20px; text-align: center; color: #ff4500; text-transform: uppercase; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 50px; }
+
+.product-card { 
+    background: #111; 
+    border: 1px solid #222; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    position: relative; 
+    transition: 0.3s; 
+    text-align: left;
+}
+.product-card:hover { transform: translateY(-5px); border-color: #ff4500; }
+.product-card img { width: 100%; height: 250px; object-fit: cover; }
+
+.discount-tag { position: absolute; background: #00ff41; color: #000; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 0 0 10px 0; top: 0; left: 0; z-index: 10; }
+
+.card-info { padding: 15px; }
+.card-info h3 { font-size: 1rem; margin-bottom: 8px; height: 45px; overflow: hidden; }
+.rating { font-size: 12px; color: #ffb400; margin-bottom: 10px; }
+.old-price { text-decoration: line-through; color: #555; font-size: 12px; display: block; }
+.price-tag { font-size: 1.4rem; color: #00ff41; font-weight: bold; display: block; }
+.installments { font-size: 12px; color: #00ff41; margin-bottom: 15px; }
+
+/* --- BOTÕES E ELEMENTOS --- */
+.btn-buy-small { 
+    display: block; 
+    background: #ff4500; 
+    color: #fff; 
+    text-align: center; 
+    padding: 12px; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
+/* --- ESTILOS DA PÁGINA DO PRODUTO (HERO) --- */
 .hero { display: flex; flex-direction: column; align-items: center; padding: 30px 0; text-align: center; }
-.hero-img { width: 100%; max-width: 350px; margin-bottom: 20px; }
-.hero-img img { width: 100%; height: auto; border-radius: 20px; border: 1px solid #333; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.hero-img { width: 100%; max-width: 400px; margin-bottom: 20px; }
+.hero-img img { width: 100%; border-radius: 20px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.price-box { background: #0a0a0a; padding: 25px; border-radius: 15px; border: 2px solid #00ff41; margin: 20px 0; }
 
-h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; }
-.badge { background: #ff4500; padding: 5px 12px; border-radius: 5px; font-size: 11px; font-weight: bold; }
-.description { color: #888; font-size: 15px; margin-bottom: 20px; }
+/* --- TIMER E ESTOQUE --- */
+#timer { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 15px; }
+#stock-container p { font-size: 12px; color: #ff4500; font-weight: bold; }
+.progress-bar { background: #222; border-radius: 10px; height: 10px; width: 80%; margin: 8px auto; overflow: hidden; }
+.progress-fill { background: #ff4500; height: 100%; width: 18%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 
-.price-box { background: #0a0a0a; padding: 25px 15px; border-radius: 15px; border: 2px solid #00ff41; width: 100%; margin: 20px 0; }
-.old-price { text-decoration: line-through; color: #555; font-size: 13px; }
-.current-price { display: block; font-size: 2rem; color: #00ff41; font-weight: 800; margin: 5px 0; }
-.pix-price { color: #aaa; font-size: 14px; }
-
-/* CSS DO TIMER E ESTOQUE */
-#urgency-container { margin-top: 20px; padding-top: 15px; border-top: 1px solid #222; }
-#countdown-container p { font-size: 11px; color: #ff4500; font-weight: bold; margin-bottom: 5px; }
-#timer { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 15px; letter-spacing: 2px; }
-
-#stock-container p { font-size: 12px; color: #ff4500; font-weight: bold; margin-bottom: 8px; }
-.progress-bar { background: #222; border-radius: 10px; height: 10px; width: 80%; margin: 0 auto; overflow: hidden; }
-.progress-fill { background: #ff4500; height: 100%; width: 18%; border-radius: 10px; animation: pulse 2s infinite; }
-
-@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-
-.btn-buy { display: block; background: #ff4500; color: #fff; text-align: center; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin-top: 10px; }
-.shipping-info { font-size: 12px; color: #00ff41; margin-top: 10px; }
-
-.section-title { font-size: 1.3rem; margin: 40px 0 20px; text-align: center; color: #ff4500; }
-.testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-.testi-card { background: #0a0a0a; padding: 20px; border-radius: 15px; border: 1px solid #1a1a1a; text-align: center; }
-.testi-card span { display: block; margin-top: 10px; font-weight: bold; color: #ff4500; font-size: 12px; }
-
-.faq-item { background: #0a0a0a; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #1a1a1a; text-align: left; }
-.faq-item h3 { font-size: 14px; color: #ff4500; margin-bottom: 5px; }
-.faq-item p { font-size: 13px; color: #888; }
-
+/* --- WHATSAPP E FOOTER --- */
 .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; z-index: 1000; text-decoration: none; }
-footer { padding: 40px 0; text-align: center; color: #444; font-size: 11px; margin-top: 30px; border-top: 1px solid #1a1a1a; }
+footer { padding: 40px 0; text-align: center; color: #444; font-size: 11px; border-top: 1px solid #1a1a1a; margin-top: 40px; }
 
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    .nav-flex { flex-direction: column; }
+    .search-bar { width: 100%; margin: 10px 0; }
+}
 @media (min-width: 768px) {
     .hero { flex-direction: row; text-align: left; gap: 50px; }
-    .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
 }

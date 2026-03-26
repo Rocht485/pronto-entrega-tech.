@@ -1,169 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background-color: #000; color: #fff; line-height: 1.4; overflow-x: hidden; }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
-body {
-    background-color: #000;
-    color: #fff;
-    line-height: 1.4;
-    -webkit-font-smoothing: antialiased;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.top-bar {
-    background: #ff4500;
-    color: #fff;
-    text-align: center;
-    padding: 10px 5px;
-    font-weight: bold;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-.navbar {
-    background: #000;
-    border-bottom: 1px solid #222;
-    padding: 15px 0;
-}
-
-.nav-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+.top-bar { background: #ff4500; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 11px; }
+.navbar { background: #000; border-bottom: 1px solid #222; padding: 15px 0; text-align: center; }
 .logo { font-size: 1.2rem; font-weight: 900; }
 .logo span { color: #ff4500; }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
-    text-align: center;
+.hero { display: flex; flex-direction: column; align-items: center; padding: 20px 0; text-align: center; }
+.hero-img { width: 100%; max-width: 300px; margin-bottom: 15px; }
+.hero-img img { width: 100%; height: auto; border-radius: 15px; display: block; }
+
+h1 { font-size: 1.6rem; margin: 10px 0; }
+.badge { background: #ff4500; padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; }
+.description { color: #888; font-size: 14px; margin-bottom: 15px; }
+
+/* CAIXA DE PREÇO - MELHORADA */
+.price-box { 
+    background: #0a0a0a; 
+    padding: 20px 10px; 
+    border-radius: 12px; 
+    border: 2px solid #00ff41; 
+    width: 100%; 
+    margin: 15px 0; 
 }
-
-.hero-img {
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 20px;
-    min-height: 200px; /* Mantém espaço se a imagem demorar */
-}
-
-.hero-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    display: block;
-}
-
-h1 { 
-    font-size: 1.8rem; 
-    margin-bottom: 10px; 
-    letter-spacing: -0.5px;
-}
-
-.badge {
-    background: #ff4500;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.description { 
-    color: #888; 
-    font-size: 14px; 
-    margin: 10px 0; 
-}
-
-.price-box {
-    background: #0a0a0a;
-    padding: 15px;
-    border-radius: 12px;
-    margin: 20px 0;
-    border: 2px solid #00ff41;
-    width: 100%;
-}
-
-.old-price { text-decoration: line-through; color: #555; font-size: 12px; }
-
+.old-price { text-decoration: line-through; color: #555; font-size: 12px; display: block; }
 .current-price { 
     display: block; 
-    font-size: 1.6rem; 
+    font-size: 1.4rem; /* Tamanho seguro para não quebrar linha */
     color: #00ff41; 
     font-weight: 800; 
     margin: 5px 0;
 }
+.pix-price { color: #aaa; font-size: 13px; display: block; }
 
-.pix-price { color: #aaa; font-size: 13px; }
+.btn-buy { display: block; background: #ff4500; color: #fff; text-align: center; padding: 18px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+.shipping-info { font-size: 11px; color: #00ff41; margin-top: 8px; }
 
-.btn-buy {
-    display: block;
-    width: 100%;
-    background: #ff4500;
-    color: #fff;
-    text-align: center;
-    padding: 18px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+.product-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; }
+.product-card { background: #0a0a0a; padding: 20px; border-radius: 15px; border: 1px solid #1a1a1a; text-align: center; }
+.product-card img { width: 100%; max-width: 140px; margin-bottom: 10px; }
+.price-tag { display: block; font-size: 1.1rem; font-weight: bold; color: #00ff41; margin-bottom: 10px; }
+.btn-buy-small { display: block; background: #222; color: #fff; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 13px; }
 
-.shipping-info { font-size: 12px; color: #00ff41; margin-top: 10px; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); z-index: 1000; }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding-bottom: 50px;
-}
-
-.product-card {
-    background: #0a0a0a;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid #1a1a1a;
-}
-
-.product-card img { width: 100%; max-width: 180px; margin-bottom: 10px; border-radius: 8px; }
-.price-tag { display: block; font-size: 1.2rem; font-weight: bold; color: #00ff41; margin-bottom: 10px; }
-.btn-buy-small { display: block; background: #222; color: #fff; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; }
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    z-index: 1000;
-}
-
-footer { padding: 30px 0; text-align: center; color: #444; font-size: 11px; }
+footer { padding: 30px 0; text-align: center; color: #444; font-size: 10px; }
 
 @media (min-width: 768px) {
-    .hero { flex-direction: row; text-align: left; gap: 50px; padding: 80px 0; }
-    .hero-img { max-width: 450px; }
-    h1 { font-size: 2.8rem; }
-    .current-price { font-size: 2.5rem; }
+    .hero { flex-direction: row; text-align: left; gap: 50px; padding: 40px 0; }
     .product-grid { grid-template-columns: repeat(2, 1fr); }
-    .nav-flex { justify-content: center; }
 }

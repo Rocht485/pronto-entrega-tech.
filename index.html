@@ -4,59 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pronto Entrega Tech | Loja Oficial</title>
+    <!-- Ícones e Fontes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* Faixa de Topo */
-        .top-bar { background: #ff4500; text-align: center; padding: 10px; font-weight: bold; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+        /* Faixa de Topo Laranja com Timer */
+        .top-bar { 
+            background: #ff4500; 
+            color: white;
+            text-align: center; 
+            padding: 12px; 
+            font-weight: bold; 
+            font-size: 13px; 
+            letter-spacing: 1px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        #top-timer { 
+            background: rgba(0,0,0,0.3); 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-family: monospace; 
+            font-size: 18px; 
+            font-weight: 900;
+            min-width: 100px;
+        }
         
         /* Navegação */
-        nav { padding: 25px; border-bottom: 1px solid #1a1a1a; text-align: center; background: #000; position: sticky; top: 0; z-index: 1000; }
+        nav { padding: 25px; border-bottom: 1px solid #1a1a1a; text-align: center; background: #000; }
         .logo { font-size: 24px; font-weight: 900; letter-spacing: -1px; }
         .logo span { color: #ff4500; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        
         .section-title { text-align: center; margin-bottom: 40px; font-size: 26px; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
 
-        /* Grid de Produtos */
+        /* Vitrine de Produtos */
         .grid-products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px; }
         .card { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px; overflow: hidden; text-align: center; padding-bottom: 30px; transition: 0.4s; }
-        .card:hover { border-color: #ff4500; transform: translateY(-10px); box-shadow: 0 10px 30px rgba(255, 69, 0, 0.1); }
+        .card:hover { border-color: #ff4500; transform: translateY(-10px); }
         .card img { width: 100%; height: 300px; object-fit: cover; border-bottom: 1px solid #1a1a1a; }
         .card h3 { margin: 25px 0 10px; font-size: 20px; font-weight: 700; }
         .price { color: #00ff41; font-size: 26px; font-weight: 900; margin-bottom: 20px; display: block; }
         .btn-details { background: #ff4500; color: #fff; text-decoration: none; padding: 15px 35px; border-radius: 10px; font-weight: bold; display: inline-block; transition: 0.3s; text-transform: uppercase; font-size: 14px; }
-        .btn-details:hover { background: #e63e00; letter-spacing: 1px; }
+        .btn-details:hover { background: #e63e00; box-shadow: 0 0 20px rgba(255, 69, 0, 0.4); }
 
-        /* SEÇÃO DE BENEFÍCIOS PREMIUM */
+        /* Benefícios com Selos Reais */
         .premium-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 60px 0; padding: 40px 0; border-top: 1px solid #1a1a1a; }
-        .benefit-card { background: #070707; border: 1px solid #151515; border-radius: 15px; padding: 30px; text-align: center; transition: 0.3s; }
-        .benefit-card:hover { background: #0a0a0a; border-color: #333; }
-        .security-img { height: 65px; margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(0,255,65,0.2)); }
+        .benefit-card { background: #070707; border: 1px solid #151515; border-radius: 15px; padding: 30px; text-align: center; }
+        .security-img { height: 70px; margin-bottom: 15px; }
         .benefit-card i { font-size: 40px; color: #ff4500; margin-bottom: 20px; display: block; }
-        .benefit-card h4 { font-size: 15px; text-transform: uppercase; color: #fff; margin-bottom: 10px; font-weight: 900; }
+        .benefit-card h4 { font-size: 15px; text-transform: uppercase; margin-bottom: 10px; font-weight: 900; }
         .benefit-card p { font-size: 13px; color: #888; line-height: 1.6; }
 
-        /* FAQ - Dúvidas Frequentes */
-        .faq-container { max-width: 800px; margin: 0 auto; padding-top: 40px; }
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; }
         details { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 15px; margin-bottom: 15px; overflow: hidden; }
+        summary { padding: 20px; cursor: pointer; font-weight: bold; display: flex; justify-content: space-between; align-items: center; outline: none; }
         details[open] { border-color: #ff4500; }
-        summary { padding: 20px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none; font-size: 15px; }
-        summary::after { content: '\f0fe'; font-family: "Font Awesome 5 Free"; font-weight: 900; color: #ff4500; }
-        details[open] summary::after { content: '\f146'; }
         .faq-answer { padding: 0 20px 20px; color: #aaa; font-size: 14px; line-height: 1.7; border-top: 1px solid #151515; padding-top: 15px; }
 
-        footer { text-align: center; padding: 80px 20px; border-top: 1px solid #1a1a1a; margin-top: 60px; color: #444; background: #050505; }
-        .footer-logo { font-size: 18px; font-weight: 900; color: #222; margin-bottom: 15px; }
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid #1a1a1a; margin-top: 60px; color: #444; background: #050505; }
+        
+        /* Responsivo para celular */
+        @media (max-width: 600px) {
+            .top-bar { flex-direction: column; gap: 5px; font-size: 11px; }
+            #top-timer { font-size: 16px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">🚚 PROMOÇÃO: FRETE GRÁTIS ATIVADO PARA TODO O BRASIL</div>
+    <!-- FAIXA LARANJA COM CRONÔMETRO -->
+    <div class="top-bar">
+        <span><i class="fas fa-bolt"></i> OFERTA COM FRETE GRÁTIS EXPIRA EM:</span>
+        <span id="top-timer">00:00:00</span>
+    </div>
 
     <nav>
         <div class="logo">PRONTO<span>ENTREGA</span>TECH</div>
@@ -64,10 +95,9 @@
 
     <main class="container">
         
-        <h2 class="section-title">🔥 Ofertas da Semana</h2>
+        <h2 class="section-title">🚀 Destaques à Pronta Entrega</h2>
         
         <div class="grid-products">
-            <!-- PRODUTO 1 -->
             <div class="card">
                 <img src="relogio.jpg" alt="Smartwatch Ultra 10">
                 <h3>Smartwatch Ultra 10</h3>
@@ -75,7 +105,6 @@
                 <a href="smartwatch-ultra.html#relogio" class="btn-details">VER DETALHES</a>
             </div>
             
-            <!-- PRODUTO 2 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="Fone Pro TWS">
                 <h3>Fone Pro TWS Max</h3>
@@ -83,7 +112,6 @@
                 <a href="smartwatch-ultra.html#fone" class="btn-details">VER DETALHES</a>
             </div>
             
-            <!-- PRODUTO 3 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headset Orion">
                 <h3>Headset Orion Pro RGB</h3>
@@ -92,60 +120,74 @@
             </div>
         </div>
 
-        <!-- SEÇÃO DE SEGURANÇA E BENEFÍCIOS -->
+        <!-- SEÇÃO DE SEGURANÇA (COM FOTOS) -->
         <div class="premium-benefits">
             <div class="benefit-card">
                 <i class="fas fa-shipping-fast"></i>
-                <h4>Envio Imediato</h4>
-                <p>Produtos à pronta entrega com despacho em até 24 horas úteis.</p>
+                <h4>Envio Express</h4>
+                <p>Despachamos seu pedido em até 24h com código de rastreio.</p>
             </div>
 
             <div class="benefit-card">
                 <img src="https://img.icons8.com/fluency/144/shield-lock.png" class="security-img" alt="Segurança">
                 <h4>Pagamento Seguro</h4>
-                <p>Seus dados são criptografados e o pagamento é processado pelo <strong>Mercado Pago</strong>.</p>
+                <p>Ambiente criptografado e protegido pelo <strong>Mercado Pago</strong>.</p>
             </div>
 
             <div class="benefit-card">
                 <img src="https://img.icons8.com/fluency/144/guarantee.png" class="security-img" alt="Garantia">
-                <h4>Garantia de Satisfação</h4>
-                <p>Receba o produto que comprou ou devolvemos 100% do seu dinheiro.</p>
+                <h4>Compra Garantida</h4>
+                <p>Receba seu produto ou o Mercado Pago devolve o seu dinheiro.</p>
             </div>
         </div>
 
         <!-- PERGUNTAS FREQUENTES -->
         <section class="faq-container">
-            <h2 class="section-title" style="font-size: 20px;"><i class="fas fa-info-circle" style="color:#ff4500"></i> Dúvidas Comuns</h2>
+            <h2 class="section-title" style="font-size: 20px;">Dúvidas Frequentes</h2>
             
             <details>
-                <summary>Como vou receber meu produto?</summary>
-                <div class="faq-answer">
-                    Enviamos via Correios ou Transportadora com seguro total. Você recebe o código de rastreio por E-mail e WhatsApp.
-                </div>
+                <summary>Qual o prazo de entrega?</summary>
+                <div class="faq-answer">O prazo médio é de 7 a 15 dias úteis para todo o Brasil.</div>
             </details>
 
             <details>
-                <summary>Quais as formas de pagamento?</summary>
-                <div class="faq-answer">
-                    Aceitamos PIX (com aprovação imediata), Boleto ou Cartão de Crédito em até 12x via Mercado Pago.
-                </div>
-            </details>
-
-            <details>
-                <summary>E se eu não gostar do produto?</summary>
-                <div class="faq-answer">
-                    Você tem 7 dias de garantia após o recebimento para solicitar a devolução gratuita, conforme o Código de Defesa do Consumidor.
-                </div>
+                <summary>É seguro comprar aqui?</summary>
+                <div class="faq-answer">Sim! Utilizamos o Mercado Pago, a maior plataforma de pagamentos do Brasil. Seu dinheiro está 100% seguro.</div>
             </details>
         </section>
 
     </main>
 
     <footer>
-        <div class="footer-logo">PRONTO ENTREGA TECH</div>
-        <p>A melhor tecnologia com o envio mais rápido do Brasil.</p>
-        <p style="margin-top: 20px; font-size: 11px; opacity: 0.5;">&copy; 2026 PRONTO ENTREGA TECH. Todos os direitos reservados.</p>
+        <p>&copy; 2026 PRONTO ENTREGA TECH - Tecnologia na sua porta.</p>
     </footer>
 
+    <!-- SCRIPT DO TIMER -->
+    <script>
+        function startTopTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // Reinicia o timer ao zerar
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let threeHours = 60 * 60 * 3; // Define 3 horas de contagem
+            let display = document.querySelector('#top-timer');
+            startTopTimer(threeHours, display);
+        };
+    </script>
 </body>
 </html>
